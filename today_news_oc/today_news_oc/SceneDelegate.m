@@ -8,6 +8,7 @@
 #import "SceneDelegate.h"
 #import "AppDelegate.h"
 #import "ImageUtil.h"
+#import "mine_view_controller.h"
 @interface SceneDelegate ()
 
 @end
@@ -21,10 +22,14 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
-    UIViewController *mineController = [[UIViewController alloc] init];
-    mineController.tabBarItem.title = @"我的";
-    mineController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"home_unselected.png"]];
-    mineController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"home_selected.png"]];
+    
+    
+    MineViewController *mineViewController = [[MineViewController alloc] init];
+    
+    UINavigationController *mineNavController = [[UINavigationController alloc] initWithRootViewController:mineViewController];
+    mineNavController.tabBarItem.title = @"我的";
+    mineNavController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"home_unselected.png"]];
+    mineNavController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"home_selected.png"]];
     
     UIViewController *videoController = [[UIViewController alloc] init];
     videoController.tabBarItem.title = @"视频";
@@ -36,14 +41,17 @@
     starController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"star_unselected.png"]];
     starController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"star_selected.png"]];
     
-    UIViewController *newsController = [[UIViewController alloc] init];
+    UIViewController *newsViewController = [[UIViewController alloc] init];
+
+     
+    UINavigationController *newsController = [[UINavigationController alloc] initWithRootViewController:newsViewController];
     newsController.tabBarItem.title = @"新闻";
     newsController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"news_unselected.png"]];
     newsController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"news_selected.png"]];
     
     tabbarController.view.backgroundColor = [UIColor whiteColor];
     [tabbarController setViewControllers: @[
-        videoController, newsController, starController, mineController
+        videoController, newsController, starController, mineNavController
     ] ];
     
     
