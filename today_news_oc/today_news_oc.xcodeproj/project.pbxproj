@@ -18,6 +18,15 @@
 		A0D71D612B1A0D660095256E /* today_news_ocTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D602B1A0D660095256E /* today_news_ocTests.m */; };
 		A0D71D6B2B1A0D660095256E /* today_news_ocUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D6A2B1A0D660095256E /* today_news_ocUITests.m */; };
 		A0D71D6D2B1A0D660095256E /* today_news_ocUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D6C2B1A0D660095256E /* today_news_ocUITestsLaunchTests.m */; };
+		A0D71D852B1AADF90095256E /* news_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D7D2B1AADF80095256E /* news_unselected.png */; };
+		A0D71D862B1AADF90095256E /* star_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D7E2B1AADF80095256E /* star_selected.png */; };
+		A0D71D872B1AADF90095256E /* star_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D7F2B1AADF80095256E /* star_unselected.png */; };
+		A0D71D882B1AADF90095256E /* news_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D802B1AADF80095256E /* news_selected.png */; };
+		A0D71D892B1AADF90095256E /* video_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D812B1AADF80095256E /* video_unselected.png */; };
+		A0D71D8A2B1AADF90095256E /* video_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D822B1AADF80095256E /* video_selected.png */; };
+		A0D71D8B2B1AADF90095256E /* home_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D832B1AADF80095256E /* home_unselected.png */; };
+		A0D71D8C2B1AADF90095256E /* home_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D842B1AADF90095256E /* home_selected.png */; };
+		A0D71D902B1B2DC60095256E /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D8F2B1B2DC60095256E /* ImageUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +65,16 @@
 		A0D71D662B1A0D660095256E /* today_news_ocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = today_news_ocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D71D6A2B1A0D660095256E /* today_news_ocUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = today_news_ocUITests.m; sourceTree = "<group>"; };
 		A0D71D6C2B1A0D660095256E /* today_news_ocUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = today_news_ocUITestsLaunchTests.m; sourceTree = "<group>"; };
+		A0D71D7D2B1AADF80095256E /* news_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_unselected.png; sourceTree = "<group>"; };
+		A0D71D7E2B1AADF80095256E /* star_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_selected.png; sourceTree = "<group>"; };
+		A0D71D7F2B1AADF80095256E /* star_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_unselected.png; sourceTree = "<group>"; };
+		A0D71D802B1AADF80095256E /* news_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = news_selected.png; sourceTree = "<group>"; };
+		A0D71D812B1AADF80095256E /* video_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_unselected.png; sourceTree = "<group>"; };
+		A0D71D822B1AADF80095256E /* video_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_selected.png; sourceTree = "<group>"; };
+		A0D71D832B1AADF80095256E /* home_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_unselected.png; sourceTree = "<group>"; };
+		A0D71D842B1AADF90095256E /* home_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_selected.png; sourceTree = "<group>"; };
+		A0D71D8F2B1B2DC60095256E /* ImageUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageUtil.m; sourceTree = "<group>"; };
+		A0D71D912B1B2DD70095256E /* ImageUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +105,9 @@
 		A0D71D352B1A0D650095256E = {
 			isa = PBXGroup;
 			children = (
+				A0D71D8D2B1B2D900095256E /* Utils */,
+				A0D71D7B2B1AABB20095256E /* Resources */,
+				A0D71D7A2B1AAB990095256E /* Supporting Files */,
 				A0D71D402B1A0D650095256E /* today_news_oc */,
 				A0D71D5F2B1A0D660095256E /* today_news_ocTests */,
 				A0D71D692B1A0D660095256E /* today_news_ocUITests */,
@@ -137,6 +159,45 @@
 				A0D71D6C2B1A0D660095256E /* today_news_ocUITestsLaunchTests.m */,
 			);
 			path = today_news_ocUITests;
+			sourceTree = "<group>";
+		};
+		A0D71D7A2B1AAB990095256E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A0D71D7B2B1AABB20095256E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71D7C2B1AABBC0095256E /* images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A0D71D7C2B1AABBC0095256E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71D842B1AADF90095256E /* home_selected.png */,
+				A0D71D832B1AADF80095256E /* home_unselected.png */,
+				A0D71D802B1AADF80095256E /* news_selected.png */,
+				A0D71D7D2B1AADF80095256E /* news_unselected.png */,
+				A0D71D7E2B1AADF80095256E /* star_selected.png */,
+				A0D71D7F2B1AADF80095256E /* star_unselected.png */,
+				A0D71D822B1AADF80095256E /* video_selected.png */,
+				A0D71D812B1AADF80095256E /* video_unselected.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		A0D71D8D2B1B2D900095256E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71D8F2B1B2DC60095256E /* ImageUtil.m */,
+				A0D71D912B1B2DD70095256E /* ImageUtil.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +304,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D71D542B1A0D660095256E /* LaunchScreen.storyboard in Resources */,
+				A0D71D892B1AADF90095256E /* video_unselected.png in Resources */,
+				A0D71D8B2B1AADF90095256E /* home_unselected.png in Resources */,
+				A0D71D8A2B1AADF90095256E /* video_selected.png in Resources */,
 				A0D71D512B1A0D660095256E /* Assets.xcassets in Resources */,
+				A0D71D852B1AADF90095256E /* news_unselected.png in Resources */,
+				A0D71D872B1AADF90095256E /* star_unselected.png in Resources */,
 				A0D71D4C2B1A0D650095256E /* Main.storyboard in Resources */,
+				A0D71D882B1AADF90095256E /* news_selected.png in Resources */,
+				A0D71D862B1AADF90095256E /* star_selected.png in Resources */,
+				A0D71D8C2B1AADF90095256E /* home_selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
+				A0D71D902B1B2DC60095256E /* ImageUtil.m in Sources */,
 				A0D71D4F2B1A0D650095256E /* today_news_oc.xcdatamodeld in Sources */,
 				A0D71D492B1A0D650095256E /* ViewController.m in Sources */,
 				A0D71D432B1A0D650095256E /* AppDelegate.m in Sources */,
@@ -449,6 +519,8 @@
 				DEVELOPMENT_TEAM = Q798TC6D2D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today_news_oc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				"INFOPLIST_KEY_CFBundleDisplayName[sdk=iphoneos*]" = "今日头条_测试";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -476,6 +548,8 @@
 				DEVELOPMENT_TEAM = Q798TC6D2D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today_news_oc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				"INFOPLIST_KEY_CFBundleDisplayName[sdk=iphoneos*]" = "今日头条";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

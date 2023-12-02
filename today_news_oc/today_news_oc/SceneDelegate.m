@@ -7,7 +7,7 @@
 
 #import "SceneDelegate.h"
 #import "AppDelegate.h"
-
+#import "ImageUtil.h"
 @interface SceneDelegate ()
 
 @end
@@ -19,8 +19,38 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    UIViewController *mineController = [[UIViewController alloc] init];
+    mineController.tabBarItem.title = @"我的";
+    mineController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"home_unselected.png"]];
+    mineController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"home_selected.png"]];
+    
+    UIViewController *videoController = [[UIViewController alloc] init];
+    videoController.tabBarItem.title = @"视频";
+    videoController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"video_unselected.png"]];
+    videoController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"video_selected.png"]];
+    
+    UIViewController *starController = [[UIViewController alloc] init];
+    starController.tabBarItem.title = @"推荐";
+    starController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"star_unselected.png"]];
+    starController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"star_selected.png"]];
+    
+    UIViewController *newsController = [[UIViewController alloc] init];
+    newsController.tabBarItem.title = @"新闻";
+    newsController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"news_unselected.png"]];
+    newsController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"news_selected.png"]];
+    
+    tabbarController.view.backgroundColor = [UIColor whiteColor];
+    [tabbarController setViewControllers: @[
+        videoController, newsController, starController, mineController
+    ] ];
+    
+    
+    self.window.rootViewController = tabbarController;
+    [self.window makeKeyAndVisible];
+ 
 }
-
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
