@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "ImageUtil.h"
 #import "mine_view_controller.h"
-@interface SceneDelegate ()
+@interface SceneDelegate ()<UITabBarControllerDelegate> 
 
 @end
 
@@ -26,10 +26,10 @@
     
     MineViewController *mineViewController = [[MineViewController alloc] init];
     
-    UINavigationController *mineNavController = [[UINavigationController alloc] initWithRootViewController:mineViewController];
-    mineNavController.tabBarItem.title = @"我的";
-    mineNavController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"home_unselected.png"]];
-    mineNavController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"home_selected.png"]];
+//    UINavigationController *mineNavController = [[UINavigationController alloc] initWithRootViewController:mineViewController];
+    mineViewController.tabBarItem.title = @"我的";
+    mineViewController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"home_unselected.png"]];
+    mineViewController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"home_selected.png"]];
     
     UIViewController *videoController = [[UIViewController alloc] init];
     videoController.tabBarItem.title = @"视频";
@@ -44,18 +44,23 @@
     UIViewController *newsViewController = [[UIViewController alloc] init];
 
      
-    UINavigationController *newsController = [[UINavigationController alloc] initWithRootViewController:newsViewController];
-    newsController.tabBarItem.title = @"新闻";
-    newsController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"news_unselected.png"]];
-    newsController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"news_selected.png"]];
+//    UINavigationController *newsController = [[UINavigationController alloc] initWithRootViewController:newsViewController];
+    newsViewController.tabBarItem.title = @"新闻";
+    newsViewController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"news_unselected.png"]];
+    newsViewController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"news_selected.png"]];
     
     tabbarController.view.backgroundColor = [UIColor whiteColor];
+    
+    tabbarController.delegate = self;
+    
     [tabbarController setViewControllers: @[
-        videoController, newsController, starController, mineNavController
+        videoController, newsViewController, starController, mineViewController
     ] ];
     
+    UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
     
-    self.window.rootViewController = tabbarController;
+    
+    self.window.rootViewController = rootNavigationController;
     [self.window makeKeyAndVisible];
  
 }
@@ -93,6 +98,25 @@
 
     // Save changes in the application's managed object context when the application transitions to the background.
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
+}
+
+#pragma mark - tabbar代理方法
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController API_AVAILABLE(ios(3.0)) {
+    NSLog(@"shouldSelectViewController");
+    return YES;
+}
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    NSLog(@"didSelectViewController");
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController willBeginCustomizingViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers API_AVAILABLE(ios(3.0)) API_UNAVAILABLE(tvos) {
+    NSLog(@"willBeginCustomizingViewControllers");
+}
+- (void)tabBarController:(UITabBarController *)tabBarController willEndCustomizingViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers changed:(BOOL)changed API_AVAILABLE(ios(3.0)) API_UNAVAILABLE(tvos) {
+    NSLog(@"willEndCustomizingViewControllers");
+}
+- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers changed:(BOOL)changed API_UNAVAILABLE(tvos) {
+    NSLog(@"didEndCustomizingViewControllers");
 }
 
 

@@ -39,9 +39,9 @@
     NSLog(@"跳转其他页面");
     UIViewController *tempViewController = [[UIViewController alloc] init];
     tempViewController.title = @"新页面";
-    
+    tempViewController.view.backgroundColor = [UIColor blueColor];
     tempViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"菜单" style:UIBarButtonItemStylePlain target:self action:@selector(doSth)];
-    [self.navigationController pushViewController:tempViewController animated:YES];
+    [self.navigationController pushViewController:tempViewController animated:NO];
 }
 
 
