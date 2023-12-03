@@ -7,7 +7,7 @@
 
 #import "news_view_controller.h"
 
-@interface NewsViewController ()<UITableViewDataSource>
+@interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 - (void)buildViews;
 - (void)gotoOtherPage;
 @end
@@ -33,6 +33,7 @@
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     tableView.dataSource = self;
+    tableView.delegate = self;
     [self.view addSubview:tableView];
 }
 
@@ -64,5 +65,17 @@
     cell.textLabel.text = @"主标题";
     cell.detailTextLabel.text = [NSString stringWithFormat:@"单元格 %d", indexPath.row];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIViewController *controller = [[UIViewController alloc] init];
+    
+    controller.view.backgroundColor = [UIColor whiteColor];
+    controller.title = [NSString stringWithFormat:@"单元格 %d 的详情", indexPath.row];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 @end
