@@ -8,7 +8,7 @@
 #import "SceneDelegate.h"
 #import "AppDelegate.h"
 #import "ImageUtil.h"
-#import "mine_view_controller.h"
+#import "biz_modules.h"
 @interface SceneDelegate ()<UITabBarControllerDelegate> 
 
 @end
@@ -31,17 +31,17 @@
     mineViewController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"home_unselected.png"]];
     mineViewController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"home_selected.png"]];
     
-    UIViewController *videoController = [[UIViewController alloc] init];
-    videoController.tabBarItem.title = @"视频";
-    videoController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"video_unselected.png"]];
-    videoController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"video_selected.png"]];
+    VideoViewController *videoViewController = [[VideoViewController alloc] init];
+    videoViewController.tabBarItem.title = @"视频";
+    videoViewController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"video_unselected.png"]];
+    videoViewController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"video_selected.png"]];
     
-    UIViewController *starController = [[UIViewController alloc] init];
-    starController.tabBarItem.title = @"推荐";
-    starController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"star_unselected.png"]];
-    starController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"star_selected.png"]];
+    StarViewController *starViewController = [[StarViewController alloc] init];
+    starViewController.tabBarItem.title = @"推荐";
+    starViewController.tabBarItem.image =  [ImageUtil getFitImage:[UIImage imageNamed:@"star_unselected.png"]];
+    starViewController.tabBarItem.selectedImage = [ImageUtil getFitImage:[UIImage imageNamed:@"star_selected.png"]];
     
-    UIViewController *newsViewController = [[UIViewController alloc] init];
+    NewsViewController *newsViewController = [[NewsViewController alloc] init];
 
      
 //    UINavigationController *newsController = [[UINavigationController alloc] initWithRootViewController:newsViewController];
@@ -54,7 +54,7 @@
     tabbarController.delegate = self;
     
     [tabbarController setViewControllers: @[
-        videoController, newsViewController, starController, mineViewController
+        newsViewController, videoViewController, starViewController, mineViewController
     ] ];
     
     UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];

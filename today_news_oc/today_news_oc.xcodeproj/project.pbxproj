@@ -28,6 +28,9 @@
 		A0D71D902B1B2DC60095256E /* ImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D8F2B1B2DC60095256E /* ImageUtil.m */; };
 		A0D71DA12B1B3B540095256E /* mine_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DA02B1B3B540095256E /* mine_view_controller.m */; };
 		A0D71DA42B1B3C5E0095256E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DA22B1B3C5E0095256E /* ViewController.m */; };
+		A0D71DB02B1C7B900095256E /* news_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DAF2B1C7B900095256E /* news_view_controller.m */; };
+		A0D71DB32B1C7C3B0095256E /* start_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DB22B1C7C3B0095256E /* start_view_controller.m */; };
+		A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DB52B1C7CBF0095256E /* video_view_controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,13 @@
 		A0D71DA02B1B3B540095256E /* mine_view_controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mine_view_controller.m; sourceTree = "<group>"; };
 		A0D71DA22B1B3C5E0095256E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A0D71DA32B1B3C5E0095256E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A0D71DAE2B1C7B770095256E /* news_view_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = news_view_controller.h; sourceTree = "<group>"; };
+		A0D71DAF2B1C7B900095256E /* news_view_controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = news_view_controller.m; sourceTree = "<group>"; };
+		A0D71DB12B1C7C2D0095256E /* star_view_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = star_view_controller.h; sourceTree = "<group>"; };
+		A0D71DB22B1C7C3B0095256E /* start_view_controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = start_view_controller.m; sourceTree = "<group>"; };
+		A0D71DB42B1C7CB20095256E /* video_view_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = video_view_controller.h; sourceTree = "<group>"; };
+		A0D71DB52B1C7CBF0095256E /* video_view_controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = video_view_controller.m; sourceTree = "<group>"; };
+		A0D71DB72B1C7D210095256E /* biz_modules.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = biz_modules.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +212,7 @@
 				A0D71D992B1B3A410095256E /* star_module */,
 				A0D71D982B1B3A2E0095256E /* news_module */,
 				A0D71D972B1B3A260095256E /* video_module */,
+				A0D71DB72B1C7D210095256E /* biz_modules.h */,
 			);
 			path = biz_modules;
 			sourceTree = "<group>";
@@ -218,6 +229,9 @@
 		A0D71D972B1B3A260095256E /* video_module */ = {
 			isa = PBXGroup;
 			children = (
+				A0D71DAD2B1C7B3A0095256E /* views */,
+				A0D71DAC2B1C7B360095256E /* models */,
+				A0D71DAB2B1C7B2E0095256E /* view_controllers */,
 			);
 			path = video_module;
 			sourceTree = "<group>";
@@ -225,6 +239,9 @@
 		A0D71D982B1B3A2E0095256E /* news_module */ = {
 			isa = PBXGroup;
 			children = (
+				A0D71DAA2B1C7B270095256E /* models */,
+				A0D71DA92B1C7B230095256E /* views */,
+				A0D71DA82B1C7B1B0095256E /* view_controllers */,
 			);
 			path = news_module;
 			sourceTree = "<group>";
@@ -232,6 +249,9 @@
 		A0D71D992B1B3A410095256E /* star_module */ = {
 			isa = PBXGroup;
 			children = (
+				A0D71DA72B1C7B150095256E /* models */,
+				A0D71DA62B1C7B0C0095256E /* views */,
+				A0D71DA52B1C7B030095256E /* view_controllers */,
 			);
 			path = star_module;
 			sourceTree = "<group>";
@@ -267,6 +287,75 @@
 				A0D71DA02B1B3B540095256E /* mine_view_controller.m */,
 			);
 			path = view_controllers;
+			sourceTree = "<group>";
+		};
+		A0D71DA52B1C7B030095256E /* view_controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71DB12B1C7C2D0095256E /* star_view_controller.h */,
+				A0D71DB22B1C7C3B0095256E /* start_view_controller.m */,
+			);
+			path = view_controllers;
+			sourceTree = "<group>";
+		};
+		A0D71DA62B1C7B0C0095256E /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		A0D71DA72B1C7B150095256E /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		A0D71DA82B1C7B1B0095256E /* view_controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71DAE2B1C7B770095256E /* news_view_controller.h */,
+				A0D71DAF2B1C7B900095256E /* news_view_controller.m */,
+			);
+			path = view_controllers;
+			sourceTree = "<group>";
+		};
+		A0D71DA92B1C7B230095256E /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		A0D71DAA2B1C7B270095256E /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		A0D71DAB2B1C7B2E0095256E /* view_controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71DB42B1C7CB20095256E /* video_view_controller.h */,
+				A0D71DB52B1C7CBF0095256E /* video_view_controller.m */,
+			);
+			path = view_controllers;
+			sourceTree = "<group>";
+		};
+		A0D71DAC2B1C7B360095256E /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		A0D71DAD2B1C7B3A0095256E /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,8 +497,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D71DA42B1B3C5E0095256E /* ViewController.m in Sources */,
+				A0D71DB32B1C7C3B0095256E /* start_view_controller.m in Sources */,
+				A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */,
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
 				A0D71DA12B1B3B540095256E /* mine_view_controller.m in Sources */,
+				A0D71DB02B1C7B900095256E /* news_view_controller.m in Sources */,
 				A0D71D902B1B2DC60095256E /* ImageUtil.m in Sources */,
 				A0D71D4F2B1A0D650095256E /* today_news_oc.xcdatamodeld in Sources */,
 				A0D71D432B1A0D650095256E /* AppDelegate.m in Sources */,
