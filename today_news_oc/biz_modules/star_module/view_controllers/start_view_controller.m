@@ -39,4 +39,9 @@
     
     [self.view addSubview:scrollView];
 }
+
+#pragma scrollView代理
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"scrollViewDidScroll - %@  第%@页",  @(scrollView.contentOffset.x), @(floor(scrollView.contentOffset.x / scrollView.bounds.size.width)));
+}
 @end

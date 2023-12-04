@@ -6,7 +6,7 @@
 //
 
 #import "news_view_controller.h"
-
+#import "news_tableview_cell.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 - (void)buildViews;
 - (void)gotoOtherPage;
@@ -57,13 +57,14 @@
 // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
+        cell = [[NewsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
     }
-    cell.imageView.image = [UIImage imageNamed:@"star_unselected.png"];
-    cell.textLabel.text = @"主标题";
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"单元格 %d", indexPath.row];
+    [cell layoutTableViewCell];
+//    cell.imageView.image = [UIImage imageNamed:@"star_unselected.png"];
+//    cell.textLabel.text = @"主标题";
+//    cell.detailTextLabel.text = [NSString stringWithFormat:@"单元格 %d", indexPath.row];
     return cell;
 }
 
