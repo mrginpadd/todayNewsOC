@@ -8,8 +8,9 @@
 #import <Foundation/Foundation.h>
 #import "star_view_controller.h"
 
-@interface StarViewController ()<UIScrollViewDelegate>
+@interface StarViewController ()<UIScrollViewDelegate, UIGestureRecognizerDelegate>
 -(void)buildViews;
+- (void) normalClick;
 @end
 
 @implementation StarViewController
@@ -33,6 +34,15 @@
         [scrollView addSubview:({
             UIView *view = [[UIView alloc] initWithFrame: CGRectMake(i*scrollView.bounds.size.width, 0, scrollView.bounds.size.width, scrollView.bounds.size.height)];
             view.backgroundColor = colorArray[i];
+            
+            [view addSubview:({
+                UIView *view = [[UIView alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
+                view.backgroundColor = [UIColor whiteColor];
+                UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(normalClick)];
+                tapGes.delegate = self;
+                [view addGestureRecognizer:tapGes];
+                view;
+            })];
             view;
         })];
     }
@@ -40,6 +50,14 @@
     [self.view addSubview:scrollView];
 }
 
+
+- (void) normalClick{
+    NSLog(@"normalClick");
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    return YES;;
+}
 #pragma scrollView代理
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"scrollViewDidScroll - %@  第%@页",  @(scrollView.contentOffset.x), @(floor(scrollView.contentOffset.x / scrollView.bounds.size.width)));

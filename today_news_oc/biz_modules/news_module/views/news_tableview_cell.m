@@ -9,11 +9,13 @@
 
 @interface NewsTableViewCell ()
 - (void) layoutTableViewCell;
+- (void) deleteBtnClick;
 @property(nonatomic, strong, readwrite) UILabel *titleLabel;
 @property(nonatomic, strong, readwrite) UILabel *sourceLabel;
 @property(nonatomic, strong, readwrite) UILabel *commentLabel;
 @property(nonatomic, strong, readwrite) UILabel *timeLabel;
 @property(nonatomic, strong, readwrite) UIImageView *rightImageView;
+@property(nonatomic, strong, readwrite) UIButton *deleteBtn;
 @end
 
 @implementation NewsTableViewCell
@@ -56,6 +58,18 @@
             self.rightImageView.backgroundColor = [UIColor redColor];
             self.rightImageView;
         })];
+        
+        [self.contentView addSubview:({
+            self.deleteBtn = [[UIButton alloc] initWithFrame:CGRectMake(260, 80, 30, 20)];
+            [self.deleteBtn setTitle:@"X" forState:UIControlStateNormal];
+            [self.deleteBtn setTitle:@"V" forState:UIControlStateHighlighted];
+            
+            self.deleteBtn.backgroundColor = [UIColor blueColor];
+            
+            [self.deleteBtn addTarget:self action:@selector(deleteBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+            
+            self.deleteBtn;
+        })];
     }
     
     return self;
@@ -75,5 +89,9 @@
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 10, self.commentLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
     
     self.rightImageView.image = [UIImage imageNamed:@"home_selected.png"];
+}
+
+- (void) deleteBtnClick:(UIButton *)sender {
+    NSLog(@"deleteBtnClick");
 }
 @end
