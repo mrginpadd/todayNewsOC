@@ -7,6 +7,7 @@
 
 #import "news_view_controller.h"
 #import "news_tableview_cell.h"
+#import "news_detail_view_controller.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 - (void)buildViews;
 - (void)gotoOtherPage;
@@ -73,7 +74,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIViewController *controller = [[UIViewController alloc] init];
+    NewsDetailViewController *controller = [[NewsDetailViewController alloc] init];
     
     controller.view.backgroundColor = [UIColor whiteColor];
     controller.title = [NSString stringWithFormat:@"单元格 %d 的详情", indexPath.row];
