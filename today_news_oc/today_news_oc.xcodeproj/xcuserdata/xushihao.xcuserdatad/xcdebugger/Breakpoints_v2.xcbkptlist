@@ -78,8 +78,8 @@
             filePath = "biz_modules/news_module/view_controllers/news_detail_view_controller.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "-webView:decidePolicyForNavigationAction:decisionHandler:"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,42 +94,26 @@
             filePath = "biz_modules/news_module/view_controllers/news_detail_view_controller.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-webView:didFinishNavigation:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "53CF45A7-E117-462F-81B2-A368BCC29746 - c9811e895760bc4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NewsDetailViewController webView:didFinishNavigation:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "53CF45A7-E117-462F-81B2-A368BCC29746 - c9811e895760bc4a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NewsDetailViewController webView:didFinishNavigation:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A977867B-C1D3-4D1B-87C6-F6B52F336C7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
