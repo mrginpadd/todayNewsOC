@@ -6,7 +6,7 @@
 //
 
 #import "news_tableview_cell.h"
-
+#import "news_delete_cell_view.h"
 @interface NewsTableViewCell ()
 - (void) layoutTableViewCell;
 - (void) deleteBtnClick;

@@ -8,13 +8,27 @@
 #import "news_view_controller.h"
 #import "news_tableview_cell.h"
 #import "news_detail_view_controller.h"
+#import "news_delete_cell_view.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource, NewsTableViewCellDelegate>
+
+@property(nonatomic, strong, readwrite) UITableView *tableView;
+@property(nonatomic, strong, readwrite) NSMutableArray *dataArray;
 - (void)buildViews;
 - (void)gotoOtherPage;
 @end
 
 @implementation NewsViewController
 
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        _dataArray = @[].mutableCopy;
+        for(int i=0; i < 20; i++) {
+            [_dataArray addObject:@(i)];
+        }
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,10 +46,10 @@
     UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoOtherPage)];
     [btn addGestureRecognizer:tapGes];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    tableView.dataSource = self;
-    tableView.delegate = self;
-    [self.view addSubview:tableView];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _tableView.dataSource = self;
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
 }
 
 - (void)doSth {
@@ -51,7 +65,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 40;
+    return _dataArray.count;
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -90,7 +104,20 @@
     } completion:^(BOOL finished) {
         delBtn.transform = CGAffineTransformIdentity; //恢复原大小
     }];
-
+    
+    NewsDeleteCellView *deleteView = [[NewsDeleteCellView alloc] initWithFrame:self.view.bounds];
+   
+    CGRect rect = [tableViewCell convertRect:delBtn.frame toView:nil];
+    
+    //处理block的循环饮用
+    __weak typeof(self) weakSelf = self;
+    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
+        __strong typeof(self) strongSelf = weakSelf;
+        NSIndexPath *indexPath = [strongSelf.tableView indexPathForCell:tableViewCell];
+        [strongSelf.dataArray removeObjectAtIndex:indexPath.row];
+        //删除cell
+        [strongSelf.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }];
 }
 
 

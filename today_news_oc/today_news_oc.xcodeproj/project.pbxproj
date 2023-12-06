@@ -32,6 +32,7 @@
 		A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DB52B1C7CBF0095256E /* video_view_controller.m */; };
 		A0D71DBA2B1DD6C60095256E /* news_tableview_cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DB92B1DD6C60095256E /* news_tableview_cell.m */; };
 		A0D71DC02B1F6B4F0095256E /* news_detail_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DBE2B1F6B4F0095256E /* news_detail_view_controller.m */; };
+		A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DC32B20A09A0095256E /* news_delete_cell_view.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		A0D71DB92B1DD6C60095256E /* news_tableview_cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = news_tableview_cell.m; sourceTree = "<group>"; };
 		A0D71DBE2B1F6B4F0095256E /* news_detail_view_controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = news_detail_view_controller.m; sourceTree = "<group>"; };
 		A0D71DC12B1F71DE0095256E /* news_detail_view_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = news_detail_view_controller.h; sourceTree = "<group>"; };
+		A0D71DC22B20A09A0095256E /* news_delete_cell_view.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = news_delete_cell_view.h; sourceTree = "<group>"; };
+		A0D71DC32B20A09A0095256E /* news_delete_cell_view.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = news_delete_cell_view.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +332,8 @@
 			children = (
 				A0D71DB82B1DD6C60095256E /* news_tableview_cell.h */,
 				A0D71DB92B1DD6C60095256E /* news_tableview_cell.m */,
+				A0D71DC22B20A09A0095256E /* news_delete_cell_view.h */,
+				A0D71DC32B20A09A0095256E /* news_delete_cell_view.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -503,6 +508,7 @@
 			files = (
 				A0D71DC02B1F6B4F0095256E /* news_detail_view_controller.m in Sources */,
 				A0D71DB32B1C7C3B0095256E /* start_view_controller.m in Sources */,
+				A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */,
 				A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */,
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
 				A0D71DA12B1B3B540095256E /* mine_view_controller.m in Sources */,
