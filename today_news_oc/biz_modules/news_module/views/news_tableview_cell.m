@@ -93,5 +93,8 @@
 
 - (void) deleteBtnClick:(UIButton *)sender {
     NSLog(@"deleteBtnClick");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDelBtn:)]) {
+        [self.delegate tableViewCell:self clickDelBtn:self.deleteBtn];
+    }
 }
 @end

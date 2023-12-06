@@ -9,7 +9,16 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol NewsTableViewCellDelegate <NSObject>
+
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDelBtn:(UIButton *)delBtn;
+
+@end
+
 @interface NewsTableViewCell : UITableViewCell
+
+@property(nonatomic, weak, readwrite) id<NewsTableViewCellDelegate> delegate;
+
 - (void) layoutTableViewCell;
 
 @end

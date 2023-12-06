@@ -8,7 +8,7 @@
 #import "news_view_controller.h"
 #import "news_tableview_cell.h"
 #import "news_detail_view_controller.h"
-@interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource, NewsTableViewCellDelegate>
 - (void)buildViews;
 - (void)gotoOtherPage;
 @end
@@ -61,6 +61,7 @@
     NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     if (cell == nil) {
         cell = [[NewsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
+        cell.delegate = self;
     }
     [cell layoutTableViewCell];
 //    cell.imageView.image = [UIImage imageNamed:@"star_unselected.png"];
@@ -80,4 +81,17 @@
     controller.title = [NSString stringWithFormat:@"单元格 %d 的详情", indexPath.row];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+
+- (void)tableViewCell:(nonnull UITableViewCell *)tableViewCell clickDelBtn:(nonnull UIButton *)delBtn {
+    
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        delBtn.transform = CGAffineTransformMakeScale(0.8, 0.8);
+    } completion:^(BOOL finished) {
+        delBtn.transform = CGAffineTransformIdentity; //恢复原大小
+    }];
+
+}
+
+
 @end
