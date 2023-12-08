@@ -1,0 +1,9 @@
+#支持的ios系统版本
+platform :ios, '9.0'
+target 'today_news_oc' do
+
+  use_frameworks!
+
+  pod 'AFNetworking'
+
+end
