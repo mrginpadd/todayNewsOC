@@ -64,10 +64,16 @@
             [self.deleteBtn setTitle:@"X" forState:UIControlStateNormal];
             [self.deleteBtn setTitle:@"V" forState:UIControlStateHighlighted];
             
-            self.deleteBtn.backgroundColor = [UIColor blueColor];
+//            self.deleteBtn.backgroundColor = [UIColor blueColor];
             
             [self.deleteBtn addTarget:self action:@selector(deleteBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             
+            // 利用Layer设置圆角
+            self.deleteBtn.layer.cornerRadius = 10;
+            self.deleteBtn.layer.masksToBounds = YES;
+            
+            self.deleteBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            self.deleteBtn.layer.borderWidth = 2;
             self.deleteBtn;
         })];
     }

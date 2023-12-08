@@ -9,10 +9,14 @@
 #import "news_tableview_cell.h"
 #import "news_detail_view_controller.h"
 #import "news_delete_cell_view.h"
+#import "NewsListLoader.h"
+
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource, NewsTableViewCellDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
 @property(nonatomic, strong, readwrite) NSMutableArray *dataArray;
+@property(nonatomic, strong, readwrite) NewsListLoader *listLoader;
+
 - (void)buildViews;
 - (void)gotoOtherPage;
 @end
@@ -50,6 +54,10 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
+    
+    self.listLoader = [[NewsListLoader alloc] init];
+    [self.listLoader loadListData];
+     
 }
 
 - (void)doSth {

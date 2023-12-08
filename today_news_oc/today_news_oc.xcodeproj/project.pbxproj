@@ -33,6 +33,7 @@
 		A0D71DBA2B1DD6C60095256E /* news_tableview_cell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DB92B1DD6C60095256E /* news_tableview_cell.m */; };
 		A0D71DC02B1F6B4F0095256E /* news_detail_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DBE2B1F6B4F0095256E /* news_detail_view_controller.m */; };
 		A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DC32B20A09A0095256E /* news_delete_cell_view.m */; };
+		A0D71DC82B228D530095256E /* NewsListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DC72B228D530095256E /* NewsListLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		A0D71DC12B1F71DE0095256E /* news_detail_view_controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = news_detail_view_controller.h; sourceTree = "<group>"; };
 		A0D71DC22B20A09A0095256E /* news_delete_cell_view.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = news_delete_cell_view.h; sourceTree = "<group>"; };
 		A0D71DC32B20A09A0095256E /* news_delete_cell_view.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = news_delete_cell_view.m; sourceTree = "<group>"; };
+		A0D71DC62B228D530095256E /* NewsListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsListLoader.h; sourceTree = "<group>"; };
+		A0D71DC72B228D530095256E /* NewsListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsListLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 		A0D71D352B1A0D650095256E = {
 			isa = PBXGroup;
 			children = (
+				A0D71DC52B228D2D0095256E /* loader */,
 				A0D71D942B1B39CF0095256E /* foundation_modules */,
 				A0D71D922B1B39390095256E /* biz_modules */,
 				A0D71D7B2B1AABB20095256E /* Resources */,
@@ -368,6 +372,15 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		A0D71DC52B228D2D0095256E /* loader */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71DC62B228D530095256E /* NewsListLoader.h */,
+				A0D71DC72B228D530095256E /* NewsListLoader.m */,
+			);
+			path = loader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -509,6 +522,7 @@
 				A0D71DC02B1F6B4F0095256E /* news_detail_view_controller.m in Sources */,
 				A0D71DB32B1C7C3B0095256E /* start_view_controller.m in Sources */,
 				A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */,
+				A0D71DC82B228D530095256E /* NewsListLoader.m in Sources */,
 				A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */,
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
 				A0D71DA12B1B3B540095256E /* mine_view_controller.m in Sources */,
