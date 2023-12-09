@@ -34,6 +34,7 @@
 		A0D71DC02B1F6B4F0095256E /* news_detail_view_controller.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DBE2B1F6B4F0095256E /* news_detail_view_controller.m */; };
 		A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DC32B20A09A0095256E /* news_delete_cell_view.m */; };
 		A0D71DC82B228D530095256E /* NewsListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DC72B228D530095256E /* NewsListLoader.m */; };
+		A0D71DCE2B243CD10095256E /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71DCD2B243CD10095256E /* NewsModel.m */; };
 		C6C20A6D663F16F3874633E6 /* Pods_today_news_oc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60EF50EE49F139CC72A1722 /* Pods_today_news_oc.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		A0D71DC62B228D530095256E /* NewsListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsListLoader.h; sourceTree = "<group>"; };
 		A0D71DC72B228D530095256E /* NewsListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsListLoader.m; sourceTree = "<group>"; };
 		A0D71DC92B2360E90095256E /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A0D71DCC2B243CD10095256E /* NewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
+		A0D71DCD2B243CD10095256E /* NewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		B60EF50EE49F139CC72A1722 /* Pods_today_news_oc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_today_news_oc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				A0D71DC92B2360E90095256E /* Podfile */,
-				A0D71DC52B228D2D0095256E /* loader */,
 				A0D71D942B1B39CF0095256E /* foundation_modules */,
 				A0D71D922B1B39390095256E /* biz_modules */,
 				A0D71D7B2B1AABB20095256E /* Resources */,
@@ -264,6 +266,7 @@
 		A0D71D982B1B3A2E0095256E /* news_module */ = {
 			isa = PBXGroup;
 			children = (
+				A0D71DCF2B243D250095256E /* controllers */,
 				A0D71DAA2B1C7B270095256E /* models */,
 				A0D71DA92B1C7B230095256E /* views */,
 				A0D71DA82B1C7B1B0095256E /* view_controllers */,
@@ -362,6 +365,8 @@
 		A0D71DAA2B1C7B270095256E /* models */ = {
 			isa = PBXGroup;
 			children = (
+				A0D71DCC2B243CD10095256E /* NewsModel.h */,
+				A0D71DCD2B243CD10095256E /* NewsModel.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -389,13 +394,13 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		A0D71DC52B228D2D0095256E /* loader */ = {
+		A0D71DCF2B243D250095256E /* controllers */ = {
 			isa = PBXGroup;
 			children = (
 				A0D71DC62B228D530095256E /* NewsListLoader.h */,
 				A0D71DC72B228D530095256E /* NewsListLoader.m */,
 			);
-			path = loader;
+			path = controllers;
 			sourceTree = "<group>";
 		};
 		D5F1100FF0B271F4E3680FA2 /* Pods */ = {
@@ -404,7 +409,6 @@
 				5FFD3253A01C5766E791F22D /* Pods-today_news_oc.debug.xcconfig */,
 				72EBBB2238D5D53CE1DBB1E6 /* Pods-today_news_oc.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -596,6 +600,7 @@
 				A0D71DC82B228D530095256E /* NewsListLoader.m in Sources */,
 				A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */,
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
+				A0D71DCE2B243CD10095256E /* NewsModel.m in Sources */,
 				A0D71DA12B1B3B540095256E /* mine_view_controller.m in Sources */,
 				A0D71DBA2B1DD6C60095256E /* news_tableview_cell.m in Sources */,
 				A0D71DB02B1C7B900095256E /* news_view_controller.m in Sources */,

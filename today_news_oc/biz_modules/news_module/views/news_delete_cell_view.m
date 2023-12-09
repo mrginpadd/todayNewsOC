@@ -40,6 +40,7 @@
     return self;
 }
 
+
 - (void) _buttonClick {
     if (_deleteBlock) {
         _deleteBlock();

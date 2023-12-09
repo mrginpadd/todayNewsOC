@@ -10,11 +10,11 @@
 #import "news_detail_view_controller.h"
 #import "news_delete_cell_view.h"
 #import "NewsListLoader.h"
-
+#import "NewsModel.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource, NewsTableViewCellDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
-@property(nonatomic, strong, readwrite) NSMutableArray *dataArray;
+@property(nonatomic, strong, readwrite) NSArray *dataArray;
 @property(nonatomic, strong, readwrite) NewsListLoader *listLoader;
 
 - (void)buildViews;
@@ -26,10 +26,7 @@
 - (instancetype) init {
     self = [super init];
     if (self) {
-        _dataArray = @[].mutableCopy;
-        for(int i=0; i < 20; i++) {
-            [_dataArray addObject:@(i)];
-        }
+//
     }
     return self;
 }
@@ -56,7 +53,14 @@
     [self.view addSubview:_tableView];
     
     self.listLoader = [[NewsListLoader alloc] init];
-    [self.listLoader loadListData];
+    
+    __weak typeof(self) weakSelf = self;
+    [self.listLoader loadListDataWithFinishBlock:^(BOOL success, NSArray<NewsModel *> * _Nonnull dataArray) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        strongSelf.dataArray = dataArray;
+        //刷新列表
+        [strongSelf.tableView reloadData];
+    }];
      
 }
 
@@ -85,7 +89,7 @@
         cell = [[NewsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
         cell.delegate = self;
     }
-    [cell layoutTableViewCell];
+    [cell layoutTableViewCellWithModel:_dataArray[indexPath.row]];
 //    cell.imageView.image = [UIImage imageNamed:@"star_unselected.png"];
 //    cell.textLabel.text = @"主标题";
 //    cell.detailTextLabel.text = [NSString stringWithFormat:@"单元格 %d", indexPath.row];
@@ -97,10 +101,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NewsDetailViewController *controller = [[NewsDetailViewController alloc] init];
-    
+
+
+    NewsModel *itemModel = self.dataArray[indexPath.row];
+
+    NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:itemModel.url];
     controller.view.backgroundColor = [UIColor whiteColor];
-    controller.title = [NSString stringWithFormat:@"单元格 %d 的详情", indexPath.row];
+    controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
+    
     [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -122,7 +130,7 @@
     [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
         __strong typeof(self) strongSelf = weakSelf;
         NSIndexPath *indexPath = [strongSelf.tableView indexPathForCell:tableViewCell];
-        [strongSelf.dataArray removeObjectAtIndex:indexPath.row];
+//        [strongSelf.dataArray removeObjectAtIndex:indexPath.row];
         //删除cell
         [strongSelf.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }];

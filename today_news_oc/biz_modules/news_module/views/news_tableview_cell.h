@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
+@class NewsModel;
+
 @protocol NewsTableViewCellDelegate <NSObject>
 
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDelBtn:(UIButton *)delBtn;
@@ -19,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, weak, readwrite) id<NewsTableViewCellDelegate> delegate;
 
-- (void) layoutTableViewCell;
+- (void) layoutTableViewCellWithModel:(NewsModel *)model;
 
 @end
 

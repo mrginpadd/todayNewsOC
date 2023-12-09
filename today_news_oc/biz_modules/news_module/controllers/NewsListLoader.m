@@ -7,12 +7,13 @@
 
 #import "NewsListLoader.h"
 #import <AFNetworking/AFNetworking.h>
+#import "NewsModel.h"
 @interface NewsListLoader()
 @property(nonatomic, strong, readonly) NSString *apiKey;
 @end
 @implementation NewsListLoader
 
-- (void)loadListData {
+- (void)loadListDataWithFinishBlock:(NewsListLoaderFinishBlock)finishBlock {
     NSLog(@"loadListData");
     
     NSString *urlString = @"http://v.juhe.cn/toutiao/index?type=top&key=78e827441812527922718592f358d7bf";
@@ -28,6 +29,21 @@
         NSError *jsonError = nil;
         id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 //        NSLog(@"%@", response);
+        
+        NSArray *dataArray = [(NSDictionary*)[(NSDictionary *)jsonObj objectForKey:@"result"] objectForKey:@"data"];
+        NSMutableArray *items = @[].mutableCopy;
+        for (NSDictionary *info in dataArray) {
+            NewsModel *itemModel = [NewsModel initWithData:info];
+            [items addObject:itemModel];
+        }
+        
+        //要在主线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(finishBlock) {
+                finishBlock(YES, items);
+            }
+        });
+
     }];
 
     [dataTask resume];

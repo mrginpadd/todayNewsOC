@@ -7,6 +7,7 @@
 
 #import "news_tableview_cell.h"
 #import "news_delete_cell_view.h"
+#import "NewsModel.h"
 @interface NewsTableViewCell ()
 - (void) layoutTableViewCell;
 - (void) deleteBtnClick;
@@ -25,9 +26,11 @@
    
     if (self) {
         [self.contentView addSubview:({
-            self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 300, 50)];
+            self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 270, 50)];
             self.titleLabel.font = [UIFont systemFontOfSize:16];
             self.titleLabel.textColor = [UIColor blackColor];
+            self.titleLabel.numberOfLines = 2;
+            self.titleLabel.lineBreakMode = NSLineBreakByTruncatingTail;
             self.titleLabel;
         })];
         
@@ -55,7 +58,7 @@
         [self.contentView addSubview:({
             self.rightImageView = [[UIImageView alloc] initWithFrame:CGRectMake(300, 15, 70, 70)];
             self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
-            self.rightImageView.backgroundColor = [UIColor redColor];
+//            self.rightImageView.backgroundColor = [UIColor redColor];
             self.rightImageView;
         })];
         
@@ -81,20 +84,25 @@
     return self;
 }
 
-- (void) layoutTableViewCell {
-    self.titleLabel.text = @"即可时间";
-    self.sourceLabel.text = @"新浪";
+- (void) layoutTableViewCellWithModel:(NewsModel *)model {
+    self.titleLabel.text = model.title;
+    self.sourceLabel.text = model.author_name;
     [self.sourceLabel sizeToFit];
     
-    self.commentLabel.text = @"1888评论";
+    self.commentLabel.text = model.category;
     [self.commentLabel sizeToFit];
     self.commentLabel.frame = CGRectMake(self.sourceLabel.frame.origin.x + self.sourceLabel.frame.size.width + 10, self.sourceLabel.frame.origin.y, self.commentLabel.frame.size.width, self.commentLabel.frame.size.height);
     
-    self.timeLabel.text = @"三分钟前";
+    self.timeLabel.text = model.date;
     [self.timeLabel sizeToFit];
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 10, self.commentLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
     
-    self.rightImageView.image = [UIImage imageNamed:@"home_selected.png"];
+//    self.rightImageView.image = [UIImage imageNamed:@"home_selected.png"];
+    //暂时用这个
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+    self.rightImageView.image = image;
+    self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.rightImageView.clipsToBounds = YES; // 确保超出部分被裁剪
 }
 
 - (void) deleteBtnClick:(UIButton *)sender {

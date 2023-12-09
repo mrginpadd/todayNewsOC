@@ -9,5 +9,5 @@
 
 @interface NewsDetailViewController : UIViewController
 
-
+-(NewsDetailViewController*) initWithUrl: (NSString *) url;
 @end
