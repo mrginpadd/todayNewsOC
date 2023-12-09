@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 //            "thumbnail_pic_s03": "https://dfzximg02.dftoutiao.com/news/20210308/20210308134708_d0216565f1d6fe1abdfa03efb4f3e23c_2_mwpm_03201609.png",
 //            "is_content": "1"
             
-@interface NewsModel : NSObject
+@interface NewsModel : NSObject<NSSecureCoding>
 @property(nonatomic, strong, readwrite) NSString *uniquekey;
 @property(nonatomic, strong, readwrite) NSString *title;
 @property(nonatomic, strong, readwrite) NSString *date;

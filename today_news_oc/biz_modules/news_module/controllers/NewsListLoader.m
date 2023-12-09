@@ -25,7 +25,12 @@
 
     NSURLSession *session = [NSURLSession sharedSession];
 
+    
+    __weak typeof(self) weakSelf = self;
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
         NSError *jsonError = nil;
         id jsonObj = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
 //        NSLog(@"%@", response);
@@ -36,7 +41,7 @@
             NewsModel *itemModel = [NewsModel initWithData:info];
             [items addObject:itemModel];
         }
-        
+        [strongSelf _archiveListDataWithArray: items.copy];
         //要在主线程
         dispatch_async(dispatch_get_main_queue(), ^{
             if(finishBlock) {
@@ -47,6 +52,7 @@
     }];
 
     [dataTask resume];
+
     
     
     // AFNetworking自动帮我们解析了结果，而上面的是二进制流
@@ -57,5 +63,56 @@
 //        }];
     
 }
+
+- (void)_archiveListDataWithArray:(NSArray<NewsModel*> *)array {
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [pathArray firstObject];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSString *filePath = [cachePath stringByAppendingString:@"newFilePath"];
+    NSError *fileError = nil;
+    //创建文件夹
+    [fileManager createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:&fileError];
+   
+    //文件数据
+//    NSData *fileContent = [@"写入文件的内容" dataUsingEncoding:NSUTF8StringEncoding];
+    //将列表序列化后写入文件
+    NSData *fileContent = [NSKeyedArchiver archivedDataWithRootObject:array requiringSecureCoding:YES error:nil];
+    //创建文件
+    NSString *listFilePath = [filePath stringByAppendingPathComponent:@"list"];
+    
+    [fileManager createFileAtPath:listFilePath contents:fileContent attributes:nil];
+    
+    
+    //读取序列化的文件，并反序列化
+    NSData *readListData = [fileManager contentsAtPath:listFilePath];
+    id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [NewsModel class], nil] fromData:readListData error:nil];
+    
+
+    //查询文件
+//    BOOL fileExist = [fileManager fileExistsAtPath:listFilePath];
+    
+    //删除文件
+//    if (fileExist) {
+//        [fileManager removeItemAtPath:listFilePath error:nil];
+//    }
+    NSLog(@"");
+    
+//    NSFileHandle *fileHandler = [NSFileHandle fileHandleForUpdatingAtPath:listFilePath];
+//
+//    //在文件末尾进行操作
+//    [fileHandler seekToEndOfFile];
+//    [fileHandler writeData:[@"def" dataUsingEncoding:NSUTF8StringEncoding]];
+//
+//    //立即写入磁盘
+//    [fileHandler synchronizeFile];
+//
+//    [fileHandler closeFile];
+}
+
+   
+
+
 
 @end

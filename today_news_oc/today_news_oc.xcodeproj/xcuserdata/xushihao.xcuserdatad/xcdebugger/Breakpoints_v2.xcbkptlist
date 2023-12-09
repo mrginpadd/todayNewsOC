@@ -82,6 +82,38 @@
             endingLineNumber = "67"
             landmarkName = "-webView:decidePolicyForNavigationAction:decisionHandler:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ECB8086D-D527-40EC-A773-2F0DFC27F8A8 - fc394f7e0cb4c2b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NewsDetailViewController webView:decidePolicyForNavigationAction:decisionHandler:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "ECB8086D-D527-40EC-A773-2F0DFC27F8A8 - fc394f7e0cb4c303"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NewsDetailViewController webView:decidePolicyForNavigationAction:decisionHandler:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,6 +130,38 @@
             endingLineNumber = "71"
             landmarkName = "-webView:didFinishNavigation:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "53CF45A7-E117-462F-81B2-A368BCC29746 - c9811e8957674160"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NewsDetailViewController webView:didFinishNavigation:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "53CF45A7-E117-462F-81B2-A368BCC29746 - c9811e89576747aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NewsDetailViewController webView:didFinishNavigation:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -114,6 +178,38 @@
             endingLineNumber = "76"
             landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A977867B-C1D3-4D1B-87C6-F6B52F336C7E - 5a34e34e3d805950"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NewsDetailViewController observeValueForKeyPath:ofObject:change:context:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "A977867B-C1D3-4D1B-87C6-F6B52F336C7E - 5a34e34e3d805e9a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NewsDetailViewController observeValueForKeyPath:ofObject:change:context:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -159,6 +255,21 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "122"
                   endingLineNumber = "122"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "CA0914F9-D8F4-4B03-98F5-367DAEF6B268 - 7b2a9c3ae6052699"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NewsViewController tableViewCell:clickDelBtn:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
                   offsetFromSymbolStart = "440">
                </Location>
             </Locations>
@@ -256,6 +367,38 @@
             endingLineNumber = "134"
             landmarkName = "-tableViewCell:clickDelBtn:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "340FC649-9B41-48DC-AF04-F2484D37A4C4 - 2f86ff0571301e0c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__48-[NewsViewController tableViewCell:clickDelBtn:]_block_invoke.32"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "340FC649-9B41-48DC-AF04-F2484D37A4C4 - 2f86ff0571301e88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__48-[NewsViewController tableViewCell:clickDelBtn:]_block_invoke.32"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
