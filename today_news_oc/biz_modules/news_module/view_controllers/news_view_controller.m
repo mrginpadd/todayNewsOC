@@ -101,15 +101,19 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
-
+    
+    
     NewsModel *itemModel = self.dataArray[indexPath.row];
-
+    
     NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:itemModel.url];
     controller.view.backgroundColor = [UIColor whiteColor];
     controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
     
     [self.navigationController pushViewController:controller animated:YES];
+    
+    //标记已读
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:itemModel.url];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 
@@ -136,5 +140,8 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
+}
 
 @end

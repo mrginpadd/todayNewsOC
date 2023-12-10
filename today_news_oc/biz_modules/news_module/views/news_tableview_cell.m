@@ -85,6 +85,13 @@
 }
 
 - (void) layoutTableViewCellWithModel:(NewsModel *)model {
+    
+    bool hasRead = [[NSUserDefaults standardUserDefaults] boolForKey:model.url];
+    if (hasRead) {
+        self.titleLabel.textColor = [UIColor grayColor];
+    } else {
+        self.titleLabel.textColor = [UIColor blackColor];
+    }
     self.titleLabel.text = model.title;
     self.sourceLabel.text = model.author_name;
     [self.sourceLabel sizeToFit];
