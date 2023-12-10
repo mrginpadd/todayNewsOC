@@ -105,9 +105,24 @@
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 10, self.commentLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
     
 //    self.rightImageView.image = [UIImage imageNamed:@"home_selected.png"];
+#warning 这是高耗时操作，运行在主线程，不推荐使用
     //暂时用这个
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
-    self.rightImageView.image = image;
+//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+    
+    // 采用线程替代
+    NSThread *downloadImgThread = [[NSThread alloc] initWithBlock:^{
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            self.rightImageView.image = image;
+        });
+       
+    }];
+    downloadImgThread.name = @"downloadImgThread";
+    
+    [downloadImgThread start];
+    
+
     self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.rightImageView.clipsToBounds = YES; // 确保超出部分被裁剪
 }
