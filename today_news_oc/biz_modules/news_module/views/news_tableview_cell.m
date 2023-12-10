@@ -110,17 +110,32 @@
 //    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
     
     // 采用线程替代
-    NSThread *downloadImgThread = [[NSThread alloc] initWithBlock:^{
+//    NSThread *downloadImgThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+//
+//        dispatch_sync(dispatch_get_main_queue(), ^{
+//            self.rightImageView.image = image;
+//        });
+//
+//    }];
+//    downloadImgThread.name = @"downloadImgThread";
+//
+//    [downloadImgThread start];
+    
+    //采用gcd
+    //下载图片的非主线程。队列
+    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    //操作UI的主线程 队列
+    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+    
+    dispatch_async(downloadQueue, ^{
+        
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
         
-        dispatch_sync(dispatch_get_main_queue(), ^{
+        dispatch_async(mainQueue, ^{
             self.rightImageView.image = image;
         });
-       
-    }];
-    downloadImgThread.name = @"downloadImgThread";
-    
-    [downloadImgThread start];
+    });
     
 
     self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
