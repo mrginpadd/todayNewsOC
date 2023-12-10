@@ -16,6 +16,14 @@
 - (void)loadListDataWithFinishBlock:(NewsListLoaderFinishBlock)finishBlock {
     NSLog(@"loadListData");
     
+    NSArray<NewsModel*> *listData = [self _readDataFromLocal];
+    if (listData != nil) {
+        if (finishBlock) {
+            finishBlock(YES, listData);
+        }
+        return;
+    }
+    
     NSString *urlString = @"http://v.juhe.cn/toutiao/index?type=top&key=78e827441812527922718592f358d7bf";
     
     NSURL *listUrl = [NSURL URLWithString:urlString];
@@ -64,6 +72,32 @@
     
 }
 
+- (NSArray<NewsModel*> *) _readDataFromLocal {
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [pathArray firstObject];
+    
+    
+    //文件夹路径
+    NSString *filePath = [cachePath stringByAppendingString:@"newFilePath"];
+    NSError *fileError = nil;
+
+    //文件路径
+    NSString *listFilePath = [filePath stringByAppendingPathComponent:@"list"];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    //读取序列化的文件，并反序列化
+    NSData *readListData = [fileManager contentsAtPath:listFilePath];
+    id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [NewsModel class], nil] fromData:readListData error:nil];
+    
+    if ([unarchiveObj isKindOfClass:[NSArray class]] && [unarchiveObj count] > 0) {
+        return (NSArray<NewsModel*>*)unarchiveObj;
+    } else {
+        return nil;
+    }
+ 
+}
+
 - (void)_archiveListDataWithArray:(NSArray<NewsModel*> *)array {
     NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachePath = [pathArray firstObject];
@@ -86,8 +120,8 @@
     
     
     //读取序列化的文件，并反序列化
-    NSData *readListData = [fileManager contentsAtPath:listFilePath];
-    id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [NewsModel class], nil] fromData:readListData error:nil];
+//    NSData *readListData = [fileManager contentsAtPath:listFilePath];
+//    id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [NewsModel class], nil] fromData:readListData error:nil];
     
 
     //查询文件
