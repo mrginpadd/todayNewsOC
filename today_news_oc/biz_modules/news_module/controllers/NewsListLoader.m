@@ -16,12 +16,14 @@
 - (void)loadListDataWithFinishBlock:(NewsListLoaderFinishBlock)finishBlock {
     NSLog(@"loadListData");
     
+    //先展示本地存储的的，再去请求接口替换数据
     NSArray<NewsModel*> *listData = [self _readDataFromLocal];
     if (listData != nil) {
         if (finishBlock) {
-            finishBlock(YES, listData);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                finishBlock(YES, listData);
+            });
         }
-        return;
     }
     
     NSString *urlString = @"http://v.juhe.cn/toutiao/index?type=top&key=78e827441812527922718592f358d7bf";
