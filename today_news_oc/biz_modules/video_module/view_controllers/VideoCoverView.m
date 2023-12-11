@@ -6,7 +6,7 @@
 //
 
 #import "VideoCoverView.h"
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface VideoCoverView()
 
@@ -27,7 +27,7 @@
             _coverView;
         })];
         
-        [self addSubview:({
+        [_coverView addSubview:({
             _playButton = [[UIImageView alloc] initWithFrame:CGRectMake((frame.size.width - 50) / 2, (frame.size.height - 50) / 2, 50, 50)];
             _playButton.image = [UIImage imageNamed:@"play.png"];
             _playButton;
@@ -47,6 +47,21 @@
 
 -(void)play {
     NSLog(@"点击播放");
+    
+    NSURL *videoURL = [NSURL URLWithString:_videoUrl];
+    
+    AVAsset *asset = [AVAsset assetWithURL:videoURL];
+    
+    AVPlayerItem *videoItem = [AVPlayerItem playerItemWithAsset:asset];
+    
+    AVPlayer *avPlayer = [AVPlayer playerWithPlayerItem:videoItem];
+    
+    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:avPlayer];
+    
+    playerLayer.frame = _coverView.bounds;
+    [_coverView.layer addSublayer:playerLayer];
+    
+    [avPlayer play];
 }
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -47,7 +47,7 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCoverView" forIndexPath:indexPath];
     
     if ([cell isKindOfClass:[VideoCoverView class]]) {
-     [((VideoCoverView *)cell) layoutWithVideoCoverUrl:@"video_cover.png" videoUrl:nil];
+     [((VideoCoverView *)cell) layoutWithVideoCoverUrl:@"video_cover.png" videoUrl:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
     }
     return cell;
 }
