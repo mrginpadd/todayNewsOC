@@ -5,5 +5,6 @@ target 'today_news_oc' do
   use_frameworks!
 
   pod 'AFNetworking'
+  pod 'SDWebImage'
 
 end

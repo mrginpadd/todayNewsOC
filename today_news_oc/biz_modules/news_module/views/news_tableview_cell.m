@@ -8,6 +8,7 @@
 #import "news_tableview_cell.h"
 #import "news_delete_cell_view.h"
 #import "NewsModel.h"
+#import "SDWebImage.h"
 @interface NewsTableViewCell ()
 - (void) layoutTableViewCell;
 - (void) deleteBtnClick;
@@ -124,19 +125,24 @@
     
     //采用gcd
     //下载图片的非主线程。队列
-    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    //操作UI的主线程 队列
-    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    //操作UI的主线程 队列
+//    dispatch_queue_main_t mainQueue = dispatch_get_main_queue();
+//
+//    dispatch_async(downloadQueue, ^{
+//
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
+//
+//        dispatch_async(mainQueue, ^{
+//            self.rightImageView.image = image;
+//        });
+//    });
     
-    dispatch_async(downloadQueue, ^{
-        
-        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:model.thumbnail_pic_s]]];
-        
-        dispatch_async(mainQueue, ^{
-            self.rightImageView.image = image;
-        });
-    });
     
+    //使用sdwebimage库
+    [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:model.thumbnail_pic_s] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        
+    }];
 
     self.rightImageView.contentMode = UIViewContentModeScaleAspectFit;
     self.rightImageView.clipsToBounds = YES; // 确保超出部分被裁剪
