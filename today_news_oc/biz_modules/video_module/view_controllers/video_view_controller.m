@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "video_view_controller.h"
-
+#import "VideoCoverView.h"
 @interface VideoViewController ()<UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>
 
 - (void)buildViews;
@@ -34,7 +34,7 @@
     collectionView.delegate = self;
     collectionView.dataSource = self;
     
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [collectionView registerClass:[VideoCoverView class] forCellWithReuseIdentifier:@"VideoCoverView"];
     
     [self.view addSubview:collectionView];
 }
@@ -44,8 +44,11 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCoverView" forIndexPath:indexPath];
+    
+    if ([cell isKindOfClass:[VideoCoverView class]]) {
+     [((VideoCoverView *)cell) layoutWithVideoCoverUrl:@"video_cover.png" videoUrl:nil];
+    }
     return cell;
 }
 
@@ -55,10 +58,11 @@
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.item % 3 == 0) {
-        return CGSizeMake(self.view.frame.size.width, 80);
-    } else {
+    
+//    if (indexPath.item % 3 == 0) {
+//        return CGSizeMake(self.view.frame.size.width, 80);
+//    } else {
         return CGSizeMake((self.view.frame.size.width - 20) / 2, 300);
-    }
+//    }
 }
 @end

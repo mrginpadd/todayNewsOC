@@ -7,35 +7,35 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "67FACE80-B7D2-4DB8-9D89-16E3C39A4573"
-            shouldBeEnabled = "Yes"
+            uuid = "C373C465-4BA3-4A10-B42B-AF563C091356"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "biz_modules/video_module/view_controllers/video_view_controller.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "67FACE80-B7D2-4DB8-9D89-16E3C39A4573 - 7b877458811e3b92"
+                  uuid = "C373C465-4BA3-4A10-B42B-AF563C091356 - f592021cb699b95"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[VideoViewController collectionView:cellForItemAtIndexPath:]"
+                  symbolName = "-[VideoViewController collectionView:numberOfItemsInSection:]"
                   moduleName = "today_news_oc"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/video_view_controller.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "64">
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "72">
                </Location>
                <Location
-                  uuid = "67FACE80-B7D2-4DB8-9D89-16E3C39A4573 - 7b877458811e3b92"
+                  uuid = "C373C465-4BA3-4A10-B42B-AF563C091356 - 7b877458811e3b48"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,9 +45,24 @@
                   urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/video_view_controller.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "80">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "C373C465-4BA3-4A10-B42B-AF563C091356 - 7b877458811e3b77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[VideoViewController collectionView:cellForItemAtIndexPath:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/video_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "172">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,24 +70,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C373C465-4BA3-4A10-B42B-AF563C091356"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "biz_modules/video_module/view_controllers/video_view_controller.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-collectionView:cellForItemAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "ECB8086D-D527-40EC-A773-2F0DFC27F8A8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "biz_modules/news_module/view_controllers/news_detail_view_controller.m"
@@ -120,7 +119,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "53CF45A7-E117-462F-81B2-A368BCC29746"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "biz_modules/news_module/view_controllers/news_detail_view_controller.m"
@@ -168,7 +167,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A977867B-C1D3-4D1B-87C6-F6B52F336C7E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "biz_modules/news_module/view_controllers/news_detail_view_controller.m"
@@ -216,7 +215,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CA0914F9-D8F4-4B03-98F5-367DAEF6B268"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "biz_modules/news_module/view_controllers/news_view_controller.m"
@@ -232,7 +231,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "32A2694E-81A5-4F40-9C80-05BAE3BAA475"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "biz_modules/news_module/views/news_delete_cell_view.m"
@@ -310,7 +309,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "340FC649-9B41-48DC-AF04-F2484D37A4C4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "biz_modules/news_module/view_controllers/news_view_controller.m"
