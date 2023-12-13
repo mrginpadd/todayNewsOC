@@ -14,6 +14,12 @@
 @property(nonatomic, strong, readwrite) UIImageView *playButton;
 @property(nonatomic, strong, readwrite) NSString *videoCoverUrl;
 @property(nonatomic, strong, readwrite) NSString *videoUrl;
+
+@property(nonatomic, strong, readwrite) AVPlayerItem *videoItem;
+@property(nonatomic, strong, readwrite) AVPlayer *avPlayer;
+@property(nonatomic, strong, readwrite) AVPlayerLayer *playerLayer;
+
+
 @end
 
 @implementation VideoCoverView
@@ -52,16 +58,18 @@
     
     AVAsset *asset = [AVAsset assetWithURL:videoURL];
     
-    AVPlayerItem *videoItem = [AVPlayerItem playerItemWithAsset:asset];
+    _videoItem = [AVPlayerItem playerItemWithAsset:asset];
     
-    AVPlayer *avPlayer = [AVPlayer playerWithPlayerItem:videoItem];
+    [_videoItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     
-    AVPlayerLayer *playerLayer = [AVPlayerLayer playerLayerWithPlayer:avPlayer];
+    _avPlayer = [AVPlayer playerWithPlayerItem:_videoItem];
     
-    playerLayer.frame = _coverView.bounds;
-    [_coverView.layer addSublayer:playerLayer];
+    _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
     
-    [avPlayer play];
+    _playerLayer.frame = _coverView.bounds;
+    [_coverView.layer addSublayer:_playerLayer];
+    
+
 }
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -71,4 +79,17 @@
 }
 */
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"status"]) {
+        if (((NSNumber *)[change objectForKey:NSKeyValueChangeNewKey]).integerValue == AVPlayerItemStatusReadyToPlay) {
+            [_avPlayer play];
+        } else {
+            NSLog(@"sda");
+        }
+    }
+}
+
+- (void) dealloc {
+    [_videoItem removeObserver:self forKeyPath:@"status"];
+}
 @end
