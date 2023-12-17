@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "video_view_controller.h"
 #import "VideoCoverView.h"
+#import "VideoToolbar.h"
 @interface VideoViewController ()<UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource>
 
 - (void)buildViews;
@@ -28,7 +29,7 @@
     flowLayOut.minimumLineSpacing = 10; //行间距
     flowLayOut.minimumInteritemSpacing = 20; //单元格列最小间距
     double itemW = (self.view.frame.size.width - 20) / 2;
-    double itemH = 300;
+    double itemH = 300 + VideoToolbarHeight;
     flowLayOut.itemSize = CGSizeMake(itemW, itemH);
     
     collectionView.delegate = self;

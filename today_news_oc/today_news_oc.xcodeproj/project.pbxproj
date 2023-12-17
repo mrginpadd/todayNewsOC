@@ -11,6 +11,8 @@
 		A0A72FAB2B27355C00BC97C6 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A72FAA2B27355C00BC97C6 /* play.png */; };
 		A0A72FAD2B2738DA00BC97C6 /* video_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A72FAC2B2738DA00BC97C6 /* video_cover.png */; };
 		A0A72FB12B2ED72800BC97C6 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FB02B2ED72800BC97C6 /* VideoPlayer.m */; };
+		A0A72FB42B2EF8A900BC97C6 /* VideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FB32B2EF8A900BC97C6 /* VideoToolbar.m */; };
+		A0A72FB82B2F0B9D00BC97C6 /* UIImage+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FB72B2F0B9D00BC97C6 /* UIImage+Custom.m */; };
 		A0D71D432B1A0D650095256E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D422B1A0D650095256E /* AppDelegate.m */; };
 		A0D71D462B1A0D650095256E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D452B1A0D650095256E /* SceneDelegate.m */; };
 		A0D71D4C2B1A0D650095256E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D4A2B1A0D650095256E /* Main.storyboard */; };
@@ -68,6 +70,10 @@
 		A0A72FAC2B2738DA00BC97C6 /* video_cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_cover.png; sourceTree = "<group>"; };
 		A0A72FAF2B2ED72800BC97C6 /* VideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoPlayer.h; sourceTree = "<group>"; };
 		A0A72FB02B2ED72800BC97C6 /* VideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
+		A0A72FB22B2EF8A900BC97C6 /* VideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolbar.h; sourceTree = "<group>"; };
+		A0A72FB32B2EF8A900BC97C6 /* VideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoToolbar.m; sourceTree = "<group>"; };
+		A0A72FB62B2F0B9D00BC97C6 /* UIImage+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Custom.h"; sourceTree = "<group>"; };
+		A0A72FB72B2F0B9D00BC97C6 /* UIImage+Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Custom.m"; sourceTree = "<group>"; };
 		A0D71D3E2B1A0D650095256E /* today_news_oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = today_news_oc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D71D412B1A0D650095256E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0D71D422B1A0D650095256E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -270,6 +276,8 @@
 			children = (
 				A0D71D8F2B1B2DC60095256E /* ImageUtil.m */,
 				A0D71D912B1B2DD70095256E /* ImageUtil.h */,
+				A0A72FB62B2F0B9D00BC97C6 /* UIImage+Custom.h */,
+				A0A72FB72B2F0B9D00BC97C6 /* UIImage+Custom.m */,
 			);
 			path = foundation_modules;
 			sourceTree = "<group>";
@@ -414,6 +422,8 @@
 		A0D71DAD2B1C7B3A0095256E /* views */ = {
 			isa = PBXGroup;
 			children = (
+				A0A72FB22B2EF8A900BC97C6 /* VideoToolbar.h */,
+				A0A72FB32B2EF8A900BC97C6 /* VideoToolbar.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -621,6 +631,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D71DC02B1F6B4F0095256E /* news_detail_view_controller.m in Sources */,
+				A0A72FB42B2EF8A900BC97C6 /* VideoToolbar.m in Sources */,
 				A0D71DB32B1C7C3B0095256E /* start_view_controller.m in Sources */,
 				A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */,
 				A0D71DC82B228D530095256E /* NewsListLoader.m in Sources */,
@@ -633,6 +644,7 @@
 				A0D71DB02B1C7B900095256E /* news_view_controller.m in Sources */,
 				A0D71D902B1B2DC60095256E /* ImageUtil.m in Sources */,
 				A0A72FB12B2ED72800BC97C6 /* VideoPlayer.m in Sources */,
+				A0A72FB82B2F0B9D00BC97C6 /* UIImage+Custom.m in Sources */,
 				A0D71D4F2B1A0D650095256E /* today_news_oc.xcdatamodeld in Sources */,
 				A0D71D432B1A0D650095256E /* AppDelegate.m in Sources */,
 				A0D71D462B1A0D650095256E /* SceneDelegate.m in Sources */,
