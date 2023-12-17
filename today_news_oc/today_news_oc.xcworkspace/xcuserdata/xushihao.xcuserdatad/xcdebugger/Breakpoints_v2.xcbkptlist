@@ -55,54 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8BAB760E-E640-478D-A232-EA07E4064248"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "biz_modules/video_module/view_controllers/VideoCoverView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-play"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8BAB760E-E640-478D-A232-EA07E4064248 - 186dac79817eaf7a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView play]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "8BAB760E-E640-478D-A232-EA07E4064248 - 186dac79817eaf7a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView play]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "511BF811-68BE-4859-8E87-D8E3B6058E99"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -119,47 +71,78 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A8B62008-E356-42A3-ADFF-6B2A0162579C"
+            uuid = "94A01821-04B1-4892-B1D5-F7387524215E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "biz_modules/video_module/view_controllers/VideoCoverView.m"
+            filePath = "biz_modules/video_module/utils/VideoPlayer.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-playWithUrl:attachView:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9DB382DA-9DA4-497F-8CA9-484638FF3ECE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "biz_modules/video_module/utils/VideoPlayer.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-playWithUrl:attachView:"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A8B62008-E356-42A3-ADFF-6B2A0162579C - 28fb8767a3e4f50e"
+                  uuid = "9DB382DA-9DA4-497F-8CA9-484638FF3ECE - 32e734b4c8d51e74"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView observeValueForKeyPath:ofObject:change:context:]"
+                  symbolName = "-[VideoPlayer playWithUrl:attachView:]"
                   moduleName = "today_news_oc"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/utils/VideoPlayer.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "236">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "224">
                </Location>
                <Location
-                  uuid = "A8B62008-E356-42A3-ADFF-6B2A0162579C - 28fb8767a3e4f50e"
+                  uuid = "9DB382DA-9DA4-497F-8CA9-484638FF3ECE - 32e734b4c8d51e74"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView observeValueForKeyPath:ofObject:change:context:]"
+                  symbolName = "-[VideoPlayer playWithUrl:attachView:]"
                   moduleName = "today_news_oc"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/utils/VideoPlayer.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "212">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "9DB382DA-9DA4-497F-8CA9-484638FF3ECE - 32e734b4c8d51e74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[VideoPlayer playWithUrl:attachView:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/utils/VideoPlayer.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "216">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -167,206 +150,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C883712E-B26E-4838-BF8A-9EAA21DED84A"
+            uuid = "91EC3953-F283-4D7E-A5C4-DFFFDDE6A2C2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "biz_modules/video_module/view_controllers/VideoCoverView.m"
+            filePath = "biz_modules/video_module/utils/VideoPlayer.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-playWithUrl:attachView:"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C883712E-B26E-4838-BF8A-9EAA21DED84A - 28fb8767a3e4f5a5"
+                  uuid = "91EC3953-F283-4D7E-A5C4-DFFFDDE6A2C2 - 32e734b4c8d51e19"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView observeValueForKeyPath:ofObject:change:context:]"
+                  symbolName = "-[VideoPlayer playWithUrl:attachView:]"
                   moduleName = "today_news_oc"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/utils/VideoPlayer.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "C883712E-B26E-4838-BF8A-9EAA21DED84A - 28fb8767a3e4f5a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView observeValueForKeyPath:ofObject:change:context:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "280">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C4DAB741-78E0-4669-A731-88756DF649AC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "biz_modules/video_module/view_controllers/VideoCoverView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C4DAB741-78E0-4669-A731-88756DF649AC - 28fb8767a3e4f540"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView observeValueForKeyPath:ofObject:change:context:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
                   offsetFromSymbolStart = "244">
                </Location>
                <Location
-                  uuid = "C4DAB741-78E0-4669-A731-88756DF649AC - 28fb8767a3e4f540"
+                  uuid = "91EC3953-F283-4D7E-A5C4-DFFFDDE6A2C2 - 32e734b4c8d51e19"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView observeValueForKeyPath:ofObject:change:context:]"
+                  symbolName = "-[VideoPlayer playWithUrl:attachView:]"
                   moduleName = "today_news_oc"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/utils/VideoPlayer.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "236">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EFAEFE2C-A019-43BE-A1AB-A4E6FA06361E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "biz_modules/video_module/view_controllers/VideoCoverView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-play"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EFAEFE2C-A019-43BE-A1AB-A4E6FA06361E - 186dac79817ea109"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView play]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "456">
-               </Location>
-               <Location
-                  uuid = "EFAEFE2C-A019-43BE-A1AB-A4E6FA06361E - ee823f44029136a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__22-[VideoCoverView play]_block_invoke"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  uuid = "EFAEFE2C-A019-43BE-A1AB-A4E6FA06361E - 186dac79817ea0f6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView play]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "344">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "51868CD8-BACB-484D-8E78-27E7AB9BD854"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "biz_modules/video_module/view_controllers/VideoCoverView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-_handlePlayEnd"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "51868CD8-BACB-484D-8E78-27E7AB9BD854 - 7f7a8b315f7593a9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView dealloc]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "51868CD8-BACB-484D-8E78-27E7AB9BD854 - 10c0c1a7417acf76"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VideoCoverView _handlePlayEnd]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/video_module/view_controllers/VideoCoverView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "28">
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "240">
                </Location>
             </Locations>
          </BreakpointContent>
