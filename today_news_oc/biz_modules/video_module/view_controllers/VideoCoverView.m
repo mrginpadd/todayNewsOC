@@ -37,7 +37,7 @@
         })];
         
         [self addSubview:({
-            _toolBar = [[VideoToolbar alloc] initWithFrame:CGRectMake(0, _coverView.bounds.size.height, frame.size.width , VideoToolbarHeight )];
+            _toolBar = [[VideoToolbar alloc] initWithFrame:CGRectMake(0, _coverView.bounds.size.height, frame.size.width - 20 , VideoToolbarHeight )];
             _toolBar;
         })];
         
