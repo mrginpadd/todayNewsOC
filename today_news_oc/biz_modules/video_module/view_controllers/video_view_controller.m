@@ -26,11 +26,16 @@
     UICollectionViewFlowLayout *flowLayOut = [[UICollectionViewFlowLayout alloc] init];
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayOut];
     
+    
+    
     flowLayOut.minimumLineSpacing = 10; //行间距
     flowLayOut.minimumInteritemSpacing = 20; //单元格列最小间距
     double itemW = (self.view.frame.size.width - 20) / 2;
     double itemH = 300 + VideoToolbarHeight;
     flowLayOut.itemSize = CGSizeMake(itemW, itemH);
+    
+    //当视图的内容发生变化时，是否自动调整它的内边距（inset）来适应导航栏、工具栏、标签栏等系统提供的界面元素。
+    collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     
     collectionView.delegate = self;
     collectionView.dataSource = self;

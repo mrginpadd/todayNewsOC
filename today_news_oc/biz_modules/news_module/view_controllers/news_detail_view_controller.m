@@ -7,6 +7,8 @@
 
 #import "news_detail_view_controller.h"
 #import <WebKit/WebKit.h>
+#import "ScreenUtil.h"
+
 @interface NewsDetailViewController ()<WKNavigationDelegate>
 @property(nonatomic, strong, readwrite) NSURL *url;
 @property(nonatomic, strong, readwrite) WKWebView *webView;
@@ -31,7 +33,7 @@
 - (void)buildViews {
 
     [self.view addSubview:({
-        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, self.view.frame.size.height - 80)];
+        self.webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, STATUSBARHEIGHT + NAVIGATIONBARHEIGHT, self.view.frame.size.width, self.view.frame.size.height - (STATUSBARHEIGHT + NAVIGATIONBARHEIGHT))];
         self.webView.navigationDelegate = self;
         self.webView;
     })];
