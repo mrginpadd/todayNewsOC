@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A05153BB2B2F347C00892968 /* ScreenUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A05153BA2B2F347C00892968 /* ScreenUtil.m */; };
+		A05153BE2B31CD1400892968 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = A05153BD2B31CD1400892968 /* SplashView.m */; };
 		A0A72FA92B27328200BC97C6 /* VideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FA82B27328200BC97C6 /* VideoCoverView.m */; };
 		A0A72FAB2B27355C00BC97C6 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A72FAA2B27355C00BC97C6 /* play.png */; };
 		A0A72FAD2B2738DA00BC97C6 /* video_cover.png in Resources */ = {isa = PBXBuildFile; fileRef = A0A72FAC2B2738DA00BC97C6 /* video_cover.png */; };
@@ -70,6 +71,8 @@
 		A05153B72B2F2DB500892968 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05153B92B2F347C00892968 /* ScreenUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenUtil.h; sourceTree = "<group>"; };
 		A05153BA2B2F347C00892968 /* ScreenUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenUtil.m; sourceTree = "<group>"; };
+		A05153BC2B31CD1400892968 /* SplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
+		A05153BD2B31CD1400892968 /* SplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		A0A72FA72B27328200BC97C6 /* VideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCoverView.h; sourceTree = "<group>"; };
 		A0A72FA82B27328200BC97C6 /* VideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCoverView.m; sourceTree = "<group>"; };
 		A0A72FAA2B27355C00BC97C6 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -216,6 +219,8 @@
 				A0D71D522B1A0D660095256E /* LaunchScreen.storyboard */,
 				A0D71D552B1A0D660095256E /* Info.plist */,
 				A0D71D562B1A0D660095256E /* main.m */,
+				A05153BC2B31CD1400892968 /* SplashView.h */,
+				A05153BD2B31CD1400892968 /* SplashView.m */,
 				A0D71D4D2B1A0D650095256E /* today_news_oc.xcdatamodeld */,
 			);
 			path = today_news_oc;
@@ -648,6 +653,7 @@
 				A0D71DB32B1C7C3B0095256E /* start_view_controller.m in Sources */,
 				A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */,
 				A0D71DC82B228D530095256E /* NewsListLoader.m in Sources */,
+				A05153BE2B31CD1400892968 /* SplashView.m in Sources */,
 				A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */,
 				A0A72FA92B27328200BC97C6 /* VideoCoverView.m in Sources */,
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
@@ -835,15 +841,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today_news_oc/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "今日头条_测试";
 				"INFOPLIST_KEY_CFBundleDisplayName[sdk=iphoneos*]" = "今日头条_测试";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -865,15 +872,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today_news_oc/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "今日头条_测试";
 				"INFOPLIST_KEY_CFBundleDisplayName[sdk=iphoneos*]" = "今日头条";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

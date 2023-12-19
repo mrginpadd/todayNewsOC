@@ -33,4 +33,14 @@
     return scaledImage;
 }
 
++ (UIImage *)getFitSizeImage:(UIImage *)image size:(CGSize)size {
+    // 根据需要调整图片大小
+    CGSize targetSize = size;// 设置目标尺寸
+    UIGraphicsBeginImageContextWithOptions(targetSize, NO, 0.0);
+    [image drawInRect:CGRectMake(0, 0, targetSize.width, targetSize.height)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;
+}
+
 @end

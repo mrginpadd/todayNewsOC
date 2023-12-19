@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ImageUtil.h"
 #import "biz_modules.h"
+#import "SplashView.h"
 @interface SceneDelegate ()<UITabBarControllerDelegate> 
 
 @end
@@ -62,6 +63,11 @@
     
     self.window.rootViewController = rootNavigationController;
     [self.window makeKeyAndVisible];
+    
+    [self.window addSubview:({
+        SplashView *splashView = [[SplashView alloc] initWithFrame:self.window.bounds];
+        splashView;
+    })];
  
 }
 

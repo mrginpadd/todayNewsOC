@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong, readonly) UIImage* smallImage;
 @property(nonatomic, strong, readonly) UIImage* middleImage;
 @property(nonatomic, strong, readonly) UIImage* largeImage;
-
++ (UIImage *)getFitSizeImage:(UIImage *)image size:(CGSize)size;
 @end
 
 NS_ASSUME_NONNULL_END
