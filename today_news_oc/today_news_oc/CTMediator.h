@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol NewsDetailViewControllerProtocol <NSObject>
+- (__kindof UIViewController *)initWithUrl:(NSString *)detailUrl;
+@end
+
+
 @interface CTMediator : NSObject
 
 //target action解耦
@@ -20,6 +25,10 @@ typedef void(^CTMediatorProcessBlock)(NSDictionary *params);
 + (NSMutableDictionary *)mediatorCache;
 + (void)registerScheme:(NSString *)scheme processBlock:(CTMediatorProcessBlock) processBlock;
 + (void)openUrl:(NSString *)url params:(NSDictionary *)params;
+
+//protocol class解耦方案
++ (void)registerProtocol:(Protocol *)protocol class:(Class)clas;
++ (Class)classForProtocol:(Protocol *)protocol;
 
 @end
 

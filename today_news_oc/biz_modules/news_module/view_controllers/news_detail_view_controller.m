@@ -18,13 +18,15 @@
 @implementation NewsDetailViewController
 
 + (void) load {
-    [CTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
-        NSString *url = (NSString *)[params objectForKey:@"url"];
-        UINavigationController *navigationController = (UIViewController *)[params objectForKey:@"controller"];
-        
-        NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:url];
-        [navigationController pushViewController:controller animated:YES];
-    }];
+//    [CTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
+//        NSString *url = (NSString *)[params objectForKey:@"url"];
+//        UINavigationController *navigationController = (UIViewController *)[params objectForKey:@"controller"];
+//        
+//        NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:url];
+//        [navigationController pushViewController:controller animated:YES];
+//    }];
+//    
+    [CTMediator registerProtocol:@protocol(NewsDetailViewControllerProtocol) class:[self class]];
 }
 
 -(NewsDetailViewController*) initWithUrl: (NSString *) url{

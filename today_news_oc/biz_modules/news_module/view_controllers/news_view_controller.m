@@ -115,12 +115,16 @@
     //    __kindof UIViewController *controller = [CTMediator  detailViewControllerWithUrl:itemModel.url];
     //        controller.view.backgroundColor = [UIColor whiteColor];
     //        controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
-    
-    [CTMediator openUrl:@"detail://" params:@{
-        @"url": itemModel.url,
-        @"controller": self.navigationController}];
+//
+//    [CTMediator openUrl:@"detail://" params:@{
+//        @"url": itemModel.url,
+//        @"controller": self.navigationController}];
 //    }];
 //    [self.navigationController pushViewController:controller animated:YES];
+    
+    
+    Class cls = [CTMediator classForProtocol:@protocol(NewsDetailViewControllerProtocol)];
+    [self.navigationController pushViewController:[[cls alloc] initWithUrl:itemModel.url] animated:YES];
     
     //标记已读
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:itemModel.url];

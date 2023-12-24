@@ -6,8 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface NewsDetailViewController : UIViewController
+#import "CTMediator.h"
+@interface NewsDetailViewController : UIViewController<NewsDetailViewControllerProtocol>
 
 -(NewsDetailViewController*) initWithUrl: (NSString *) url;
 @end

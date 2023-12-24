@@ -40,4 +40,15 @@
         block(params);
     }
 }
+
+//protocol class解耦方案
++ (void)registerProtocol:(Protocol *)protocol class:(Class)clas {
+    if (protocol && clas) {
+        [[[self class] mediatorCache] setObject:clas forKey:NSStringFromProtocol(protocol)];
+        
+    }
+}
++ (Class)classForProtocol:(Protocol *)protocol {
+    return [[[self class] mediatorCache]  objectForKey:NSStringFromProtocol(protocol)];
+}
 @end
