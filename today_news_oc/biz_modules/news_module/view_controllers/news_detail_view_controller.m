@@ -8,7 +8,7 @@
 #import "news_detail_view_controller.h"
 #import <WebKit/WebKit.h>
 #import "ScreenUtil.h"
-
+#import "CTMediator.h"
 @interface NewsDetailViewController ()<WKNavigationDelegate>
 @property(nonatomic, strong, readwrite) NSURL *url;
 @property(nonatomic, strong, readwrite) WKWebView *webView;
@@ -16,6 +16,16 @@
 @end
 
 @implementation NewsDetailViewController
+
++ (void) load {
+    [CTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
+        NSString *url = (NSString *)[params objectForKey:@"url"];
+        UINavigationController *navigationController = (UIViewController *)[params objectForKey:@"controller"];
+        
+        NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:url];
+        [navigationController pushViewController:controller animated:YES];
+    }];
+}
 
 -(NewsDetailViewController*) initWithUrl: (NSString *) url{
     self = [super init];

@@ -164,5 +164,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6B98246-7C61-41E8-9E4A-9AC17858F133"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "+load"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B6B98246-7C61-41E8-9E4A-9AC17858F133 - 7c17fbd783c1ef07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[NewsDetailViewController load]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "B6B98246-7C61-41E8-9E4A-9AC17858F133 - 351f7e08b1aea039"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32+[NewsDetailViewController load]_block_invoke"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/biz_modules/news_module/view_controllers/news_detail_view_controller.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B94AFC39-CAA1-4E77-98FE-85898685BDC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "biz_modules/news_module/view_controllers/news_view_controller.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

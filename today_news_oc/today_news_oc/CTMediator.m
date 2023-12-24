@@ -9,10 +9,35 @@
 
 @implementation CTMediator
 
-//target action
+//target action 解耦方案
 + (__kindof UIViewController *)detailViewControllerWithUrl:(NSString *)detailUrl {
     Class detailCls = NSClassFromString(@"NewsDetailViewController");
-    UIViewController *controller = [[detailCls alloc] performSelector:(@"initWithUrlString")];
+    UIViewController *controller = [[detailCls alloc] performSelector:(@"initWithUrl")];
     return controller;
+}
+
+// url scheme 解耦方案
++ (NSMutableDictionary *)mediatorCache {
+    static NSMutableDictionary *cache;
+    static dispatch_once_t *onceToken;
+    dispatch_once(&onceToken, ^{
+        cache = @{}.mutableCopy;
+    });
+    return cache;
+}
+
+
++ (void)registerScheme:(NSString *)scheme processBlock:(CTMediatorProcessBlock) processBlock {
+    
+    if (scheme && processBlock) {
+        [[[self class] mediatorCache] setObject:processBlock forKey:scheme]; 
+    }
+    
+}
++ (void)openUrl:(NSString *)url params:(NSDictionary *)params {
+    CTMediatorProcessBlock block = [[[self class] mediatorCache] objectForKey:url];
+    if(block) {
+        block(params);
+    }
 }
 @end

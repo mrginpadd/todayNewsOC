@@ -107,15 +107,20 @@
     
     NewsModel *itemModel = self.dataArray[indexPath.row];
     
-//    NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:itemModel.url];
-//    controller.view.backgroundColor = [UIColor whiteColor];
-//    controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
+    //    NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:itemModel.url];
+    //    controller.view.backgroundColor = [UIColor whiteColor];
+    //    controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
     
-    __kindof UIViewController *controller = [CTMediator  detailViewControllerWithUrl:itemModel.url];
-        controller.view.backgroundColor = [UIColor whiteColor];
-        controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
+    //target actio解耦
+    //    __kindof UIViewController *controller = [CTMediator  detailViewControllerWithUrl:itemModel.url];
+    //        controller.view.backgroundColor = [UIColor whiteColor];
+    //        controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
     
-    [self.navigationController pushViewController:controller animated:YES];
+    [CTMediator openUrl:@"detail://" params:@{
+        @"url": itemModel.url,
+        @"controller": self.navigationController}];
+//    }];
+//    [self.navigationController pushViewController:controller animated:YES];
     
     //标记已读
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:itemModel.url];
