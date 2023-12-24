@@ -66,6 +66,38 @@
             endingLineNumber = "31"
             landmarkName = "-initWithFrame:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15F6A53A-D376-4B7D-BAB2-1A09837EE604 - 3813c623ca27bd6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SplashView initWithFrame:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SplashView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "15F6A53A-D376-4B7D-BAB2-1A09837EE604 - 3813c623ca27bef6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SplashView initWithFrame:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SplashView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "3180">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,6 +113,54 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "-initWithFrame:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4E2ED8DD-03AA-4AE8-9631-02A57AE1968B - 3813c623ca27bef6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SplashView initWithFrame:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SplashView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "4E2ED8DD-03AA-4AE8-9631-02A57AE1968B - 3813c623ca27bed5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SplashView initWithFrame:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SplashView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "3296">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CAE40EF-0AF1-4660-881B-4FE880B8DEF2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "today_news_oc/AppDelegate.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-application:openURL:options:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

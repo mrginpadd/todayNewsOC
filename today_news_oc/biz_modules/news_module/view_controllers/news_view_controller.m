@@ -11,6 +11,8 @@
 #import "news_delete_cell_view.h"
 #import "NewsListLoader.h"
 #import "NewsModel.h"
+
+#import "CTMediator.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource, NewsTableViewCellDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
@@ -105,9 +107,13 @@
     
     NewsModel *itemModel = self.dataArray[indexPath.row];
     
-    NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:itemModel.url];
-    controller.view.backgroundColor = [UIColor whiteColor];
-    controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
+//    NewsDetailViewController *controller = [[NewsDetailViewController alloc] initWithUrl:itemModel.url];
+//    controller.view.backgroundColor = [UIColor whiteColor];
+//    controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
+    
+    __kindof UIViewController *controller = [CTMediator  detailViewControllerWithUrl:itemModel.url];
+        controller.view.backgroundColor = [UIColor whiteColor];
+        controller.title = [NSString stringWithFormat:@"%@", itemModel.title];
     
     [self.navigationController pushViewController:controller animated:YES];
     

@@ -15,6 +15,7 @@
 		A0A72FB12B2ED72800BC97C6 /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FB02B2ED72800BC97C6 /* VideoPlayer.m */; };
 		A0A72FB42B2EF8A900BC97C6 /* VideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FB32B2EF8A900BC97C6 /* VideoToolbar.m */; };
 		A0A72FB82B2F0B9D00BC97C6 /* UIImage+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FB72B2F0B9D00BC97C6 /* UIImage+Custom.m */; };
+		A0CCF6902B383323004E6CC5 /* CTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CCF68F2B383232004E6CC5 /* CTMediator.m */; };
 		A0D71D432B1A0D650095256E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D422B1A0D650095256E /* AppDelegate.m */; };
 		A0D71D462B1A0D650095256E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D71D452B1A0D650095256E /* SceneDelegate.m */; };
 		A0D71D4C2B1A0D650095256E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D71D4A2B1A0D650095256E /* Main.storyboard */; };
@@ -84,6 +85,8 @@
 		A0A72FB62B2F0B9D00BC97C6 /* UIImage+Custom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Custom.h"; sourceTree = "<group>"; };
 		A0A72FB72B2F0B9D00BC97C6 /* UIImage+Custom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Custom.m"; sourceTree = "<group>"; };
 		A0A72FB92B2F215200BC97C6 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CCF68E2B383232004E6CC5 /* CTMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTMediator.h; sourceTree = "<group>"; };
+		A0CCF68F2B383232004E6CC5 /* CTMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTMediator.m; sourceTree = "<group>"; };
 		A0D71D3E2B1A0D650095256E /* today_news_oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = today_news_oc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D71D412B1A0D650095256E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0D71D422B1A0D650095256E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 		A0D71D402B1A0D650095256E /* today_news_oc */ = {
 			isa = PBXGroup;
 			children = (
+				A0CCF68E2B383232004E6CC5 /* CTMediator.h */,
+				A0CCF68F2B383232004E6CC5 /* CTMediator.m */,
 				A0D71D412B1A0D650095256E /* AppDelegate.h */,
 				A0D71D422B1A0D650095256E /* AppDelegate.m */,
 				A0D71D442B1A0D650095256E /* SceneDelegate.h */,
@@ -654,6 +659,7 @@
 				A0D71DC42B20A09A0095256E /* news_delete_cell_view.m in Sources */,
 				A0D71DC82B228D530095256E /* NewsListLoader.m in Sources */,
 				A05153BE2B31CD1400892968 /* SplashView.m in Sources */,
+				A0CCF6902B383323004E6CC5 /* CTMediator.m in Sources */,
 				A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */,
 				A0A72FA92B27328200BC97C6 /* VideoCoverView.m in Sources */,
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
