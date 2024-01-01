@@ -6,10 +6,14 @@
 //
 
 #import "mine_view_controller.h"
-
-@interface MineViewController ()<UITableViewDataSource>
+#import "GTLogin.h"
+@interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
 - (void)buildViews;
 - (void)gotoOtherPage;
+
+@property (nonatomic, strong, readwrite) UITableView *tableView;
+@property (nonatomic, strong, readwrite) UITableViewHeaderFooterView *tableViewHeaderView;
+@property (nonatomic, strong, readwrite) UIImageView *headerImageView;
 @end
 
 @implementation MineViewController
@@ -24,16 +28,9 @@
 
 
 - (void)buildViews {
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
-    [btn setTitle:@"跳转" forState:UIControlStateNormal];
-    btn.backgroundColor = [UIColor redColor];
-    [self.view addSubview: btn];
-    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gotoOtherPage)];
-    [btn addGestureRecognizer:tapGes];
-    
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _tableView.dataSource = self;
+    [self.view addSubview:_tableView];
 }
 
 - (void)doSth {
@@ -49,20 +46,61 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 40;
+    return 2;
 }
-
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellId"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellId"];
     }
-    cell.imageView.image = [UIImage imageNamed:@"star_unselected.png"];
-    cell.textLabel.text = @"主标题";
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"单元格 %d", indexPath.row];
+    
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (!_tableViewHeaderView) {
+        _tableViewHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 150)];
+        _tableView.backgroundColor = [UIColor whiteColor];
+        
+        [_tableViewHeaderView addSubview:({
+            _headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, 90)];
+            _headerImageView.backgroundColor = [UIColor whiteColor];
+            _headerImageView.contentMode = UIViewContentModeScaleAspectFit;
+            _headerImageView.clipsToBounds = YES;
+            _headerImageView.userInteractionEnabled = YES;
+            _headerImageView;
+        })];
+        
+        [_tableViewHeaderView addGestureRecognizer:({
+            UITapGestureRecognizer *tagGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapImage)];
+            tagGes;
+        })];
+        
+    }
+    return _tableViewHeaderView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return  200;
+}
+
+
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+//    if (![[GTLogin sharedLogin] isLogin]) {
+//        //        _headerImageView setImage:【
+//    } else {
+//        
+//    }
+}
+
+-(void) _tapImage {
+    
+}
+
 @end

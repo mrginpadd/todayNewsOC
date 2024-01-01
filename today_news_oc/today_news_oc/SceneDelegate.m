@@ -11,7 +11,7 @@
 #import "biz_modules.h"
 #import "SplashView.h"
 
-#import <CustomFrameWork/CustomFrameWork.h>
+
 @interface SceneDelegate ()<UITabBarControllerDelegate> 
 
 @end
@@ -24,7 +24,7 @@
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
-    [CustomFrameWorkUtil printFrameWork];
+
     
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     

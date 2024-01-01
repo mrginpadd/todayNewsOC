@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GTLogin : NSObject
 
+@property (nonatomic, strong, readwrite) GTLogin *sharedLogin;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,4 +9,9 @@
 
 @implementation GTLogin
 
+//
+//GTLogin *sharedLogin {
+//    
+//}
+
 @end
