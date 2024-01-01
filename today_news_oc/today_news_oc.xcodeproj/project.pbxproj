@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00815CC2B429BB90021755E /* libCustomStaticLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A00815CB2B429BB90021755E /* libCustomStaticLibrary.a */; };
+		A00815FB2B42A8710021755E /* CustomFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00815F62B42A7760021755E /* CustomFrameWork.framework */; };
+		A00815FC2B42A8710021755E /* CustomFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A00815F62B42A7760021755E /* CustomFrameWork.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A00816002B42B41B0021755E /* GTLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A00815FF2B42B41B0021755E /* GTLogin.m */; };
 		A05153BB2B2F347C00892968 /* ScreenUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A05153BA2B2F347C00892968 /* ScreenUtil.m */; };
 		A05153BE2B31CD1400892968 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = A05153BD2B31CD1400892968 /* SplashView.m */; };
 		A0A72FA92B27328200BC97C6 /* VideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FA82B27328200BC97C6 /* VideoCoverView.m */; };
@@ -64,9 +68,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A00815FD2B42A8720021755E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A00815FC2B42A8710021755E /* CustomFrameWork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5FFD3253A01C5766E791F22D /* Pods-today_news_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-today_news_oc.debug.xcconfig"; path = "Target Support Files/Pods-today_news_oc/Pods-today_news_oc.debug.xcconfig"; sourceTree = "<group>"; };
 		72EBBB2238D5D53CE1DBB1E6 /* Pods-today_news_oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-today_news_oc.release.xcconfig"; path = "Target Support Files/Pods-today_news_oc/Pods-today_news_oc.release.xcconfig"; sourceTree = "<group>"; };
+		A00815CA2B429BB90021755E /* CustomStaticLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomStaticLibrary.h; sourceTree = "<group>"; };
+		A00815CB2B429BB90021755E /* libCustomStaticLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCustomStaticLibrary.a; sourceTree = "<group>"; };
+		A00815F62B42A7760021755E /* CustomFrameWork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CustomFrameWork.framework; sourceTree = "<group>"; };
+		A00815FE2B42B41B0021755E /* GTLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTLogin.h; sourceTree = "<group>"; };
+		A00815FF2B42B41B0021755E /* GTLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLogin.m; sourceTree = "<group>"; };
 		A05153AE2B2F28F900892968 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05153B52B2F2DA800892968 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05153B72B2F2DB500892968 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,7 +164,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00815CC2B429BB90021755E /* libCustomStaticLibrary.a in Frameworks */,
 				C6C20A6D663F16F3874633E6 /* Pods_today_news_oc.framework in Frameworks */,
+				A00815FB2B42A8710021755E /* CustomFrameWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,9 +208,20 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		A0CCF71E2B429AF1004E6CC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A00815F62B42A7760021755E /* CustomFrameWork.framework */,
+				A00815CA2B429BB90021755E /* CustomStaticLibrary.h */,
+				A00815CB2B429BB90021755E /* libCustomStaticLibrary.a */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		A0D71D352B1A0D650095256E = {
 			isa = PBXGroup;
 			children = (
+				A0CCF71E2B429AF1004E6CC5 /* Frameworks */,
 				A0D71DC92B2360E90095256E /* Podfile */,
 				A0D71D942B1B39CF0095256E /* foundation_modules */,
 				A0D71D922B1B39390095256E /* biz_modules */,
@@ -366,6 +402,8 @@
 			children = (
 				A0D71D9F2B1B3B230095256E /* mine_view_controller.h */,
 				A0D71DA02B1B3B540095256E /* mine_view_controller.m */,
+				A00815FE2B42B41B0021755E /* GTLogin.h */,
+				A00815FF2B42B41B0021755E /* GTLogin.m */,
 			);
 			path = view_controllers;
 			sourceTree = "<group>";
@@ -481,6 +519,7 @@
 				A0D71D3B2B1A0D650095256E /* Frameworks */,
 				A0D71D3C2B1A0D650095256E /* Resources */,
 				8FF466C0A08CAF2C4E4CF11C /* [CP] Embed Pods Frameworks */,
+				A00815FD2B42A8720021755E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -615,6 +654,8 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-today_news_oc/Pods-today_news_oc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-today_news_oc/Pods-today_news_oc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
@@ -661,6 +702,7 @@
 				A05153BE2B31CD1400892968 /* SplashView.m in Sources */,
 				A0CCF6902B383323004E6CC5 /* CTMediator.m in Sources */,
 				A0D71DB62B1C7CBF0095256E /* video_view_controller.m in Sources */,
+				A00816002B42B41B0021755E /* GTLogin.m in Sources */,
 				A0A72FA92B27328200BC97C6 /* VideoCoverView.m in Sources */,
 				A0D71D572B1A0D660095256E /* main.m in Sources */,
 				A0D71DCE2B243CD10095256E /* NewsModel.m in Sources */,
@@ -851,6 +893,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today_news_oc/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "今日头条_测试";
@@ -863,6 +909,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "omo.today-news-oc";
@@ -882,6 +932,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today_news_oc/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "今日头条_测试";
@@ -894,6 +948,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "omo.today-news-oc";
