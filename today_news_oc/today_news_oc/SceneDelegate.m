@@ -10,7 +10,6 @@
 #import "ImageUtil.h"
 #import "biz_modules.h"
 #import "SplashView.h"
-#import "GTLocation.h"
 
 @interface SceneDelegate ()<UITabBarControllerDelegate> 
 
@@ -72,6 +71,7 @@
         SplashView *splashView = [[SplashView alloc] initWithFrame:self.window.bounds];
         splashView;
     })];
+    
  
 }
 

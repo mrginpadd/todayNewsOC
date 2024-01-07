@@ -110,57 +110,10 @@
             filePath = "today_news_oc/AppDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "-application:configurationForConnectingSceneSession:options:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1D0B1C47-E1C0-4667-8A51-D8AB599B1191 - 1716b97a67c682ef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate application:configurationForConnectingSceneSession:options:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/AppDelegate.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  uuid = "1D0B1C47-E1C0-4667-8A51-D8AB599B1191 - 1716b97a67c682ef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate application:configurationForConnectingSceneSession:options:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/AppDelegate.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "104">
-               </Location>
-               <Location
-                  uuid = "1D0B1C47-E1C0-4667-8A51-D8AB599B1191 - 1716b97a67c68321"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate application:configurationForConnectingSceneSession:options:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/AppDelegate.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "109">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -173,10 +126,42 @@
             filePath = "today_news_oc/SceneDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "-scene:willConnectToSession:options:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5F604902-3598-4F9C-BD84-644C837DA129 - 63562b6f460fe15b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SceneDelegate scene:willConnectToSession:options:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SceneDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "129">
+               </Location>
+               <Location
+                  uuid = "5F604902-3598-4F9C-BD84-644C837DA129 - 63562b6f460f1eba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SceneDelegate scene:willConnectToSession:options:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SceneDelegate.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "129">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -189,42 +174,10 @@
             filePath = "today_news_oc/AppDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "-application:didFinishLaunchingWithOptions:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3FEA5D04-25BB-4146-9D75-14993F36320F - 990615932ab522d3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate application:didFinishLaunchingWithOptions:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/AppDelegate.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "69">
-               </Location>
-               <Location
-                  uuid = "3FEA5D04-25BB-4146-9D75-14993F36320F - 990615932ab52274"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AppDelegate application:didFinishLaunchingWithOptions:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/AppDelegate.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "69">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -241,38 +194,6 @@
             endingLineNumber = "89"
             landmarkName = "-sceneDidBecomeActive:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "39786507-A598-486C-8EDD-784AF532F7FB - 83e246829efabb80"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SceneDelegate sceneDidBecomeActive:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SceneDelegate.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "39786507-A598-486C-8EDD-784AF532F7FB - 83e246829efabbbf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SceneDelegate sceneDidBecomeActive:]"
-                  moduleName = "today_news_oc"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/today_news_oc/SceneDelegate.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -401,6 +322,86 @@
             endingLineNumber = "49"
             landmarkName = "-locationManager:didChangeAuthorizationStatus:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6A2583C8-909A-4E26-9D35-86D69FF90117 - 12a9f3a726e97c66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GTLocation locationManager:didChangeAuthorizationStatus:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/foundation_modules/GTLocation.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "63">
+               </Location>
+               <Location
+                  uuid = "6A2583C8-909A-4E26-9D35-86D69FF90117 - 12a9f3a726e97c66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GTLocation locationManager:didChangeAuthorizationStatus:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/foundation_modules/GTLocation.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "118">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2A1FCC6-6D74-4DF4-9F25-0C00111D79BD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "foundation_modules/GTNotification.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-userNotificationCenter:willPresentNotification:withCompletionHandler:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D2A1FCC6-6D74-4DF4-9F25-0C00111D79BD - 172bb6b94e1998d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GTNotification userNotificationCenter:willPresentNotification:withCompletionHandler:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/foundation_modules/GTNotification.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "D2A1FCC6-6D74-4DF4-9F25-0C00111D79BD - 172bb6b94e1998f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GTNotification userNotificationCenter:willPresentNotification:withCompletionHandler:]"
+                  moduleName = "today_news_oc"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xushihao/Documents/todayNewsOC/today_news_oc/foundation_modules/GTNotification.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "94">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

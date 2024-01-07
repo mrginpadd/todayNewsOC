@@ -12,6 +12,7 @@
 		A00C1AE62B42DE7200DDED2A /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00C1AE52B42DE7200DDED2A /* TencentOpenAPI.framework */; };
 		A00C1AE92B42E1FA00DDED2A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00C1AE82B42E1FA00DDED2A /* SystemConfiguration.framework */; };
 		A00C1AEC2B49A14F00DDED2A /* GTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C1AEB2B49A14F00DDED2A /* GTLocation.m */; };
+		A00C1AEF2B4AEEEC00DDED2A /* GTNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C1AEE2B4AEEEC00DDED2A /* GTNotification.m */; };
 		A05153BB2B2F347C00892968 /* ScreenUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A05153BA2B2F347C00892968 /* ScreenUtil.m */; };
 		A05153BE2B31CD1400892968 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = A05153BD2B31CD1400892968 /* SplashView.m */; };
 		A0A72FA92B27328200BC97C6 /* VideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A72FA82B27328200BC97C6 /* VideoCoverView.m */; };
@@ -92,6 +93,8 @@
 		A00C1AE82B42E1FA00DDED2A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A00C1AEA2B49A14F00DDED2A /* GTLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTLocation.h; sourceTree = "<group>"; };
 		A00C1AEB2B49A14F00DDED2A /* GTLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLocation.m; sourceTree = "<group>"; };
+		A00C1AED2B4AEEEC00DDED2A /* GTNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNotification.h; sourceTree = "<group>"; };
+		A00C1AEE2B4AEEEC00DDED2A /* GTNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNotification.m; sourceTree = "<group>"; };
 		A05153AE2B2F28F900892968 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05153B52B2F2DA800892968 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05153B72B2F2DB500892968 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +345,8 @@
 				A05153BA2B2F347C00892968 /* ScreenUtil.m */,
 				A00C1AEA2B49A14F00DDED2A /* GTLocation.h */,
 				A00C1AEB2B49A14F00DDED2A /* GTLocation.m */,
+				A00C1AED2B4AEEEC00DDED2A /* GTNotification.h */,
+				A00C1AEE2B4AEEEC00DDED2A /* GTNotification.m */,
 			);
 			path = foundation_modules;
 			sourceTree = "<group>";
@@ -718,6 +723,7 @@
 				A0A72FB82B2F0B9D00BC97C6 /* UIImage+Custom.m in Sources */,
 				A0D71D4F2B1A0D650095256E /* today_news_oc.xcdatamodeld in Sources */,
 				A0D71D432B1A0D650095256E /* AppDelegate.m in Sources */,
+				A00C1AEF2B4AEEEC00DDED2A /* GTNotification.m in Sources */,
 				A00C1AEC2B49A14F00DDED2A /* GTLocation.m in Sources */,
 				A0D71D462B1A0D650095256E /* SceneDelegate.m in Sources */,
 			);
