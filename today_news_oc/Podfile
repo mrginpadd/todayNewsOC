@@ -6,5 +6,6 @@ target 'today_news_oc' do
 
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'CocoaLumberjack'
   #pod 'Masonry', '~> 1.0.2'
 end

@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "GTLocation.h"
 @interface AppDelegate ()
 
 @end
@@ -15,6 +15,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [[GTLocation shared] checkLocationAuthorization];
     // Override point for customization after application launch.
     return YES;
 }

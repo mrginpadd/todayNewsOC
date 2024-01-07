@@ -10,7 +10,7 @@
 #import "ImageUtil.h"
 #import "biz_modules.h"
 #import "SplashView.h"
-
+#import "GTLocation.h"
 
 @interface SceneDelegate ()<UITabBarControllerDelegate> 
 
@@ -86,6 +86,7 @@
 - (void)sceneDidBecomeActive:(UIScene *)scene {
     // Called when the scene has moved from an inactive state to an active state.
     // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+
 }
 
 
