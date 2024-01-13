@@ -20,6 +20,9 @@
     [[GTLocation shared] checkLocationAuthorization];
     [[GTNotification shared] checkNotificationAuthorization];
     // Override point for customization after application launch.
+    
+    //自定义app的消息图片
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 100;
     return YES;
 }
 
