@@ -30,9 +30,9 @@
             //本地推送
             [self _pushLocalNotification];
             //远程推送  向APNS服务器注册deviveToken
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [[UIApplication sharedApplication] registerForRemoteNotifications];
-            });
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                [[UIApplication sharedApplication] registerForRemoteNotifications];
+//            });
             
         }
         
