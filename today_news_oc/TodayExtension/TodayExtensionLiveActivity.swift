@@ -34,7 +34,9 @@ struct TodayExtensionLiveActivity: Widget {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    var userDefault = UserDefaults(suiteName: "group.xsh")
+                    var title = userDefault?.object(forKey: "shared") as! String
+                    Text("\(title)")
                 }
                 DynamicIslandExpandedRegion(.trailing) {
                     Text("Trailing")

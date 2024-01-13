@@ -132,6 +132,8 @@
 		A00C1B012B52875A00DDED2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A00C1B032B52875A00DDED2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A00C1B222B52885500DDED2A /* today_news_oc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "today_news_oc-Bridging-Header.h"; sourceTree = "<group>"; };
+		A00C1B252B528DA700DDED2A /* today_news_oc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = today_news_oc.entitlements; sourceTree = "<group>"; };
+		A00C1B262B528DB400DDED2A /* TodayExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayExtensionExtension.entitlements; sourceTree = "<group>"; };
 		A05153AE2B2F28F900892968 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05153B52B2F2DA800892968 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05153B72B2F2DB500892968 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +291,7 @@
 		A0D71D352B1A0D650095256E = {
 			isa = PBXGroup;
 			children = (
+				A00C1B262B528DB400DDED2A /* TodayExtensionExtension.entitlements */,
 				A00C1AF92B52875900DDED2A /* TodayExtension */,
 				A0CCF71E2B429AF1004E6CC5 /* Frameworks */,
 				A0D71DC92B2360E90095256E /* Podfile */,
@@ -319,6 +322,7 @@
 		A0D71D402B1A0D650095256E /* today_news_oc */ = {
 			isa = PBXGroup;
 			children = (
+				A00C1B252B528DA700DDED2A /* today_news_oc.entitlements */,
 				A0CCF68E2B383232004E6CC5 /* CTMediator.h */,
 				A0CCF68F2B383232004E6CC5 /* CTMediator.m */,
 				A0D71D412B1A0D650095256E /* AppDelegate.h */,
@@ -900,6 +904,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TodayExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;
@@ -930,6 +935,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TodayExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;
@@ -1076,6 +1082,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = today_news_oc/today_news_oc.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;
@@ -1121,6 +1128,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = today_news_oc/today_news_oc.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q798TC6D2D;

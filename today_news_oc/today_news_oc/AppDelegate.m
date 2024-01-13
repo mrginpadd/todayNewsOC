@@ -23,6 +23,9 @@
     
     //自定义app的消息图片
     [UIApplication sharedApplication].applicationIconBadgeNumber = 100;
+    
+    NSUserDefaults *userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.xsh"];
+    [userDefault setObject:@"app和extension共享的数据" forKey:@"shared"];
     return YES;
 }
 
