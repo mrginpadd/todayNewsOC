@@ -6,6 +6,7 @@
 //
 
 #import "GTNotification.h"
+#import <UIKit/UIKit.h>
 #import <UserNotifications/UserNotifications.h>
 
 @interface GTNotification()<UNUserNotificationCenterDelegate>
@@ -26,7 +27,13 @@
     center.delegate = self;
     [center requestAuthorizationWithOptions:UNAuthorizationOptionBadge completionHandler:^(BOOL granted, NSError * _Nullable error) {
         if (granted) { //请求权限成功后触发推送
+            //本地推送
             [self _pushLocalNotification];
+            //远程推送  向APNS服务器注册deviveToken
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [[UIApplication sharedApplication] registerForRemoteNotifications];
+            });
+            
         }
         
     }];
