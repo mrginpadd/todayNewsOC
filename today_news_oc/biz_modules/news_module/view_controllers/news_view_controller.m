@@ -13,6 +13,9 @@
 #import "NewsModel.h"
 
 #import "CTMediator.h"
+
+#import "GTSearchBar.h"
+#import "ScreenUtil.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource, NewsTableViewCellDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
@@ -37,6 +40,17 @@
     
     
     [self buildViews];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    [self.tabBarController.navigationItem setTitleView:({
+        GTSearchBar *searchBar = [[GTSearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - UI(20), self.navigationController.navigationBar.bounds.size.height)];
+        searchBar;
+    })];
     
 }
 
