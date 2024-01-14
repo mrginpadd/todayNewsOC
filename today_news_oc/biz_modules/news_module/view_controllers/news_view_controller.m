@@ -16,6 +16,7 @@
 
 #import "GTSearchBar.h"
 #import "ScreenUtil.h"
+#import "GTCommentManager.h"
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource, NewsTableViewCellDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
@@ -48,12 +49,23 @@
     
     self.navigationController.navigationBar.barTintColor = [UIColor redColor];
     [self.tabBarController.navigationItem setTitleView:({
-        GTSearchBar *searchBar = [[GTSearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - UI(20), self.navigationController.navigationBar.bounds.size.height)];
-        searchBar;
+        
+//        GTSearchBar *searchBar = [[GTSearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - UI(20), self.navigationController.navigationBar.bounds.size.height)];
+//        searchBar;
+        
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - UI(20), self.navigationController.navigationBar.bounds.size.height)];
+        button.backgroundColor = [UIColor blueColor];
+        [button setTitle:@"弹起评论输入框" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(showCommentView) forControlEvents:UIControlEventTouchUpInside];
+        button;
     })];
     
 }
 
+- (void)showCommentView {
+    [[GTCommentManager shared] showCommentView];
+}
 
 - (void)buildViews {
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 30)];
